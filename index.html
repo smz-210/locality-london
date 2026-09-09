@@ -169,7 +169,7 @@
   .toggle button.active { color: var(--on-dark); }
   /* Left/width are set from JS to match each button's real content width —
      the two labels are very different lengths ("Private office · £/desk/mo"
-     vs "Dedicated Desk · £/month"), so a fixed 50/50 split left the longer label's
+     vs "Coworking · £/desk/mo"), so a fixed 50/50 split left the longer label's
      white active-state text spilling past the pill onto white background
      and disappearing. */
   .toggle .indicator {
@@ -605,10 +605,10 @@
 <div class="sec-hero">
   <div class="wrap">
     <header class="masthead">
-      <p class="eyebrow">Price map &amp; comparison tool</p>
-      <h1>London flexible office guide</h1>
-      <p class="sub">See how private-office and dedicated-desk prices vary across 36 London localities — from London Borough of Waltham Forest at £222/desk/month to Mayfair at £982 — so you can compare neighbourhoods before you compare buildings.</p>
-      <button class="cta-primary" id="heroCta">Talk to a workspace advisor</button>
+      <p class="eyebrow">London office price comparison tool</p>
+      <h1>London office price map: compare costs by area</h1>
+      <p class="sub">Compare average private office and coworking or fixed-desk prices across more than 40 London localities. Private office averages range from £209 per desk per month in Lewisham to £982 in Mayfair. Use the workspace toggle to compare areas, explore lower-cost locations and identify options that suit your team and budget.</p>
+      <button class="cta-primary" id="heroCta">Speak to an office space advisor</button>
     </header>
   </div>
 </div>
@@ -621,7 +621,7 @@
           <div class="toggle" id="productToggle">
             <div class="indicator" id="toggleIndicator"></div>
             <button data-product="private" class="active">Private office &middot; £/desk/mo</button>
-            <button data-product="coworking">Dedicated Desk &middot; £/month</button>
+            <button data-product="coworking">Coworking &middot; £/desk/mo</button>
           </div>
           <span class="badge-info" id="coworkingBadge">Market reference from public and operator listings — not a myHQ product. Ask us for real availability and pricing.</span>
         </div>
@@ -709,19 +709,19 @@
       <h2>Common questions</h2>
       <details open>
         <summary>How much does office space cost vary by area in London?<span></span></summary>
-        <p>Across the 36 London localities we track (390 combined private-office and dedicated-desk listings), private-office prices per desk per month range from area averages of about £222 in outer boroughs to £982 in Mayfair — more than a 4x spread depending purely on postcode, with a citywide median area-average near £520/desk/month. Mayfair and Covent Garden sit at the top (roughly £860&ndash;£980/desk/month), while London Borough of Waltham Forest and Poplar sit closer to £220&ndash;£230/desk/month.</p>
+        <p>Across the 181 private-office listings behind this map, price per desk per month (normalised for office size) ranges from about £141 to £3,200 — a wide spread depending purely on postcode, with a citywide median near £550/desk/month. Mayfair and Covent Garden sit at the top (roughly £860&ndash;£980/desk/month), while Whitechapel and Hackney &amp; Bethnal Green sit closer to £200&ndash;£300/desk/month for comparable desk sizes.</p>
       </details>
       <details>
         <summary>What's the cheapest area for office space in London?</summary>
-        <p>Among areas with a reasonable sample (3 or more listings), London Borough of Waltham Forest (~£222/desk/month) and Poplar (~£227/desk/month) are the most affordable London localities we track. A few areas with only a single listing price lower still, but one listing isn't enough to call a trend.</p>
+        <p>Among areas with more than a handful of listings, Hackney &amp; Bethnal Green (~£302/desk/month) and Stratford &amp; Bow (~£388/desk/month) are the most affordable core-London submarkets we track. Outer submarkets can price lower still, but with far fewer comparable listings.</p>
       </details>
       <details>
         <summary>What's the best area for a small team's first London office?</summary>
-        <p>For a first office, most small teams prioritise low cost and good transport over a landmark postcode — which points to areas like London Borough of Waltham Forest, Poplar or Bermondsey, all under £350/desk/month with direct links into the centre. See "<a href="#personaGrid">Which London area fits your team?</a>" above for matches by industry.</p>
+        <p>For a first office, most small teams prioritise low cost and good transport over a landmark postcode — which points to Zone 2 areas like Hackney &amp; Bethnal Green, Stratford &amp; Bow or Whitechapel, all under £400/desk/month with direct links into the centre. See "<a href="#personaGrid">Which London area fits your team?</a>" above for matches by industry.</p>
       </details>
       <details>
-        <summary>Is a dedicated desk cheaper than a private office?</summary>
-        <p>Generally yes — a dedicated desk works out cheaper than a private office in the same area for a small team, since you're not paying for unused space. Across the areas we track, dedicated-desk prices average roughly £200&ndash;£530/desk/month against £220&ndash;£980/desk/month for a private office; the private office earns its premium once a team needs its own walls, lockable storage or room to grow into. Get a quote for your team size and we'll compare both product types side by side.</p>
+        <summary>Is coworking cheaper than a private office?</summary>
+        <p>Generally yes — coworking works out cheaper than a private office in the same area for a small team, since you're not paying for unused space. Across the areas we track, coworking prices average roughly £200&ndash;£750/desk/month against £200&ndash;£980/desk/month for a private office; the private office earns its premium once a team needs its own walls, lockable storage or room to grow into. Get a quote for your team size and we'll compare both product types side by side.</p>
       </details>
       <details>
         <summary>How current is this data?</summary>
@@ -735,8 +735,8 @@
   <div class="wrap">
     <div class="method">
       <h3>How prices are calculated</h3>
-      <p>Private-office prices are normalised to <b>£ per desk per month</b> by dividing each listing's advertised "from" price by the smallest office size it applies to — this avoids a 30-desk suite skewing an area's number just because it's a big space. Dedicated-desk/coworking figures are the advertised monthly rate for an ongoing desk, not a day pass, so both metrics are directly comparable across areas. Figures are aggregated from public marketplace and operator listings, not myHQ's own booking data, and reflect a single dated snapshot rather than live availability.</p>
-      <p>Broadly, price tracks Tube zone more than any other single factor: Zone 1 core areas (Mayfair, Soho, City of London) sit at £620&ndash;£980/desk/month, Zone 1 fringe (Shoreditch, Clerkenwell, South Bank, Holborn) at £525&ndash;£630, and outer areas (Hackney, Stratford, Canary Wharf, London Borough of Waltham Forest) drop to £220&ndash;£520 — often for a shorter commute than a "cheap" Zone 1 postcode once you account for space per person.</p>
+      <p>Private-office prices are normalised to <b>£ per desk per month</b> by dividing each listing's advertised "from" price by the smallest office size it applies to — this avoids a 30-desk suite skewing an area's number just because it's a big space. Coworking figures are the advertised monthly rate for an ongoing desk, not a day pass, so both metrics are directly comparable across areas. Figures are aggregated from public marketplace and operator listings, not myHQ's own booking data, and reflect a single dated snapshot rather than live availability.</p>
+      <p>Broadly, price tracks Tube zone more than any other single factor: Zone 1 core areas (Mayfair, Soho, the City) sit at £620&ndash;£980/desk/month, Zone 1 fringe (Shoreditch, Farringdon &amp; Clerkenwell, Borough &amp; London Bridge, Holborn) at £525&ndash;£640, and Zone 2&ndash;3 areas (Hackney, Stratford, Canary Wharf) drop to £300&ndash;£520 — often for a shorter commute than a "cheap" Zone 1 postcode once you account for space per person.</p>
       <p class="footnote">Areas with 2 or fewer listings are marked "small sample" in the ledger — treat those figures as directional, not definitive. "Best for," area descriptions and the operators listed in the compare view are representative characterisations for this prototype, not a verified or exhaustive directory.</p>
     </div>
   </div>
@@ -798,9 +798,9 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"How much does office space cost vary by area in London?","acceptedAnswer":{"@type":"Answer","text":"Private-office desks across the 36 London localities we track average about £222 to £982 per desk per month depending on postcode — over a 4x spread — with a citywide median area-average near £520/desk/month."}},
-    {"@type":"Question","name":"What's the cheapest area for office space in London?","acceptedAnswer":{"@type":"Answer","text":"London Borough of Waltham Forest and Poplar are among the most affordable London localities we track, with area averages around £222-£227 per desk per month."}},
-    {"@type":"Question","name":"What's the best area for a small team's first London office?","acceptedAnswer":{"@type":"Answer","text":"Areas with good transport and low cost per desk (under £350/month), such as London Borough of Waltham Forest, Poplar or Bermondsey, offer the lowest cost for a first office."}},
+    {"@type":"Question","name":"How much does office space cost vary by area in London?","acceptedAnswer":{"@type":"Answer","text":"Private office desks in the 20 London areas we track range from about £141 to £3,200 per desk per month depending on postcode, with a citywide median near £550/desk/month."}},
+    {"@type":"Question","name":"What's the cheapest area for office space in London?","acceptedAnswer":{"@type":"Answer","text":"Hackney & Bethnal Green and Stratford & Bow are among the most affordable core-London submarkets, with averages around £300-£390 per desk per month."}},
+    {"@type":"Question","name":"What's the best area for a small team's first London office?","acceptedAnswer":{"@type":"Answer","text":"Zone 2 areas with good transport links, such as Hackney & Bethnal Green, Stratford & Bow or Whitechapel, offer the lowest cost per desk (under £400/month) for a first office."}},
     {"@type":"Question","name":"Shoreditch vs City of London: which is cheaper for office space?","acceptedAnswer":{"@type":"Answer","text":"Shoreditch is the cheaper of the two, at roughly £582/desk/month versus £623/desk/month in the City — though both attract fast-growth tech and creative teams, so the choice often comes down to industry fit as much as price."}},
     {"@type":"Question","name":"Mayfair vs Soho: which is cheaper for office space?","acceptedAnswer":{"@type":"Answer","text":"Soho is cheaper, at roughly £760/desk/month versus Mayfair's £982/desk/month, though both are among London's most expensive submarkets and popular with creative and finance teams respectively."}},
     {"@type":"Question","name":"City of London vs Canary Wharf: which is cheaper for office space?","acceptedAnswer":{"@type":"Answer","text":"Canary Wharf is cheaper, at roughly £519/desk/month versus £623/desk/month in the City of London, despite both being major finance and corporate HQ hubs — though Canary Wharf's figure is based on a small sample of listings."}}
@@ -811,186 +811,106 @@
 <script>
 (function(){
   var DATA = [
-    {id:"city-of-london", name:"City of London", x:951, y:380,
-      private:{avg:623,median:623,min:299,max:1800,n:23}, coworking:{avg:346,min:189,max:700,n:17},
-      about:"London's historic financial core, the Square Mile, dense with banking, insurance and legal HQs.",
-      bestFor:["Finance & fintech","Professional & legal services"],
-      buildings:[]},
-    {id:"shoreditch", name:"Shoreditch", x:992, y:267,
+    {id:"shoreditch", name:"Shoreditch & Old Street", x:992, y:267,
       private:{avg:582,median:582,min:332,max:875,n:12}, coworking:{avg:332,min:120,max:500,n:15},
-      about:"London's tech and creative heartland, where warehouse conversions sit beside startups and nightlife.",
+      about:"Exposed brick and standing desks — London's original tech-and-creative postcode, still setting the tone for coworking culture.",
       bestFor:["Fast-growth tech & scaleups","Creative & media"],
-      buildings:[]},
-    {id:"holborn", name:"Holborn", x:796, y:342,
+      buildings:["Fora — Old Street","Huckletree — Shoreditch","x+why — Worship Street"]},
+    {id:"city", name:"City (Bank & Aldgate)", x:951, y:380,
+      private:{avg:623,median:623,min:299,max:1800,n:23}, coworking:{avg:346,min:189,max:700,n:17},
+      about:"Suits, trading floors and centuries of finance — the address that reassures clients before you've said a word.",
+      bestFor:["Finance & fintech","Professional & legal services"],
+      buildings:["beyond — Aldgate Tower","Fora — Bank","Clockwise — Liverpool Street"]},
+    {id:"holborn", name:"Holborn & Chancery Lane", x:796, y:342,
       private:{avg:627,median:627,min:273,max:1124,n:12}, coworking:{avg:337,min:148,max:450,n:11},
-      about:"The bridge between the West End and the City, long associated with the legal profession and the Inns of Court.",
+      about:"Barristers' chambers next door to boutique agencies — quietly prestigious, five minutes from everything.",
       bestFor:["Professional & legal services"],
-      buildings:[]},
-    {id:"marylebone", name:"Marylebone", x:513, y:294,
-      private:{avg:857,median:857,min:220,max:3200,n:14}, coworking:{avg:347,min:148,max:450,n:7},
-      about:"A refined central village of Georgian streets, medical practices and independent boutiques off Marylebone High Street.",
-      bestFor:["Healthcare & life sciences"],
-      buildings:[]},
-    {id:"mayfair", name:"Mayfair", x:595, y:421,
-      private:{avg:982,median:982,min:326,max:2642,n:17}, coworking:{avg:750,min:700,max:800,n:2},
-      about:"London's most prestigious address, home to hedge funds, private equity, art dealers and luxury retail.",
-      bestFor:["Finance & fintech"],
-      buildings:[]},
-    {id:"camden", name:"Camden", x:636, y:140,
-      private:{avg:520,median:520,min:152,max:980,n:14}, coworking:{avg:388,min:289,max:450,n:5},
-      about:"A famously alternative quarter around the markets and Regents Canal, strong in music, fashion and creative studios.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"islington", name:"Islington", x:857, y:158,
-      private:{avg:392,median:392,min:141,max:696,n:14}, coworking:{avg:398,min:295,max:500,n:3},
-      about:"A well-heeled north London district around Angel and Upper Street, popular with media and design firms.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"soho", name:"Soho", x:668, y:378,
-      private:{avg:760,median:760,min:412,max:1408,n:13}, coworking:{avg:400,min:289,max:450,n:5},
-      about:"Central London's entertainment and media village, dense with post-production, advertising and hospitality.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"hammersmith", name:"Hammersmith", x:160, y:573,
-      private:{avg:493,median:493,min:215,max:1280,n:8}, coworking:{avg:371,min:255,max:480,n:5},
-      about:"A major west London commercial hub by the river, well connected and home to large corporate campuses.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"south-bank", name:"South Bank", x:870, y:425,
-      private:{avg:601,median:601,min:279,max:1614,n:11}, coworking:{avg:396,min:289,max:450,n:3},
-      about:"A riverside cultural strip running from Waterloo to Blackfriars, mixing arts venues with modern office towers.",
-      bestFor:["Creative & media"],
-      buildings:[]},
+      buildings:["Fora — Chancery Lane","Landmark — High Holborn"]},
     {id:"fitzrovia", name:"Fitzrovia", x:620, y:329,
       private:{avg:728,median:728,min:319,max:1200,n:10}, coworking:{avg:363,min:189,max:450,n:3},
-      about:"A quietly central pocket north of Oxford Street, favoured by advertising, architecture and media businesses.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"ealing", name:"Ealing", x:5, y:590,
-      private:{avg:261,median:261,min:95,max:385,n:8}, coworking:{avg:350,min:350,max:350,n:1},
-      about:"A leafy west London town centre, historically the home of Ealing Studios and now a growing suburban office market.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"london-bridge", name:"London Bridge", x:960, y:455,
-      private:{avg:641,median:641,min:279,max:1085,n:8}, coworking:{avg:437,min:399,max:450,n:4},
-      about:"A riverside business district anchored by The Shard, strong in professional services and healthcare.",
-      bestFor:["Professional & legal services","Healthcare & life sciences"],
-      buildings:[]},
-    {id:"bloomsbury", name:"Bloomsbury", x:709, y:311,
-      private:{avg:520,median:520,min:300,max:810,n:7}, coworking:{avg:372,min:148,max:550,n:7},
-      about:"The academic quarter around the British Museum and UCL, dominated by universities, publishers and institutions.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"covent-garden", name:"Covent Garden", x:741, y:395,
-      private:{avg:863,median:863,min:509,max:2200,n:9}, coworking:{avg:353,min:189,max:450,n:3},
-      about:"A pedestrianised heart of the West End, blending theatre, retail and creative agency offices.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"kensington", name:"Kensington", x:302, y:514,
-      private:{avg:348,median:348,min:135,max:700,n:7}, coworking:{avg:490,min:379,max:600,n:2},
-      about:"An affluent west London district of museums, embassies and elegant garden squares.",
-      bestFor:[],
-      buildings:[]},
-    {id:"victoria", name:"Victoria", x:671, y:533,
-      private:{avg:728,median:728,min:525,max:965,n:5}, coworking:{avg:410,min:289,max:450,n:4},
-      about:"A major transport interchange and government-adjacent business district, extensively redeveloped in recent years.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"paddington", name:"Paddington", x:446, y:354,
-      private:{avg:649,median:649,min:319,max:1118,n:6}, coworking:{avg:530,min:289,max:700,n:3},
-      about:"A canalside commercial quarter around the station and Paddington Basin, with excellent Heathrow links.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"wandsworth", name:"Wandsworth", x:346, y:906,
-      private:{avg:402,median:402,min:241,max:595,n:4}, coworking:{avg:199,min:199,max:199,n:1},
-      about:"A residential south London borough with a growing local office market around the town centre and riverside.",
-      bestFor:[],
-      buildings:[]},
-    {id:"clerkenwell", name:"Clerkenwell", x:847, y:283,
+      about:"Ad agencies and architects in Georgian townhouses — polished without trying too hard.",
+      bestFor:["Creative & media","Fast-growth tech & scaleups"],
+      buildings:["Boutique Workplace — Fitzrovia","Spacemade — Great Titchfield St"]},
+    {id:"farringdon", name:"Farringdon & Clerkenwell", x:850, y:315,
       private:{avg:525,median:525,min:250,max:850,n:5}, coworking:{avg:285,min:120,max:450,n:2},
-      about:"The design and architecture district, known for its showrooms, converted workshops and the annual Clerkenwell Design Week.",
+      about:"Design studios, fintech and the Elizabeth line — London's best-connected creative cluster.",
+      bestFor:["Fast-growth tech & scaleups","Creative & media"],
+      buildings:["x+why — Clerkenwell","Huckletree — Farringdon"]},
+    {id:"covent", name:"Covent Garden", x:741, y:395,
+      private:{avg:863,median:863,min:509,max:2200,n:9}, coworking:{avg:353,min:189,max:450,n:3},
+      about:"Theatres, flagship stores and media brands — an address that does a lot of talking for you.",
+      bestFor:["Creative & media","Retail & consumer brands"],
+      buildings:["Fora — Covent Garden","Runway East — Long Acre"]},
+    {id:"borough", name:"Borough & London Bridge", x:959, y:463,
+      private:{avg:641,median:641,min:279,max:1085,n:8}, coworking:{avg:437,min:399,max:450,n:4},
+      about:"Scaleups and consultancies in the shadow of the Shard — City access without City prices.",
+      bestFor:["Fast-growth tech & scaleups","Professional & legal services"],
+      buildings:["WorkLife — Borough","Runway East — London Bridge"]},
+    {id:"camden", name:"Camden, King's Cross & Euston", x:636, y:140,
+      private:{avg:520,median:520,min:152,max:980,n:14}, coworking:{avg:388,min:289,max:450,n:5},
+      about:"Google's neighbourhood — a science-and-tech corridor built around three mainline stations.",
+      bestFor:["Fast-growth tech & scaleups","Creative & media"],
+      buildings:["Huckletree — King's Cross","Landmark — Euston"]},
+    {id:"soho", name:"Soho", x:668, y:378,
+      private:{avg:760,median:760,min:412,max:1408,n:13}, coworking:{avg:400,min:289,max:450,n:5},
+      about:"Media, music and marketing — small floors, big reputations, and rent to match.",
       bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"spitalfields", name:"Spitalfields", x:1035, y:300,
-      private:{avg:403,median:403,min:194,max:700,n:5}, coworking:{avg:387,min:148,max:500,n:4},
-      about:"A characterful City-fringe area around the old market, mixing Georgian streets with new office towers.",
-      bestFor:[],
-      buildings:[]},
-    {id:"st-jamess", name:"St. James's", x:615, y:460,
-      private:{avg:652,median:652,min:345,max:1017,n:5}, coworking:{avg:190,min:190,max:190,n:1},
-      about:"A discreet, historic enclave of gentlemen’s clubs, art galleries and boutique asset managers.",
-      bestFor:["Finance & fintech"],
-      buildings:[]},
-    {id:"london-borough-of-waltham-forest", name:"London Borough of Waltham Forest", x:1250, y:5,
-      private:{avg:222,median:222,min:218,max:232,n:5}, coworking:{avg:210,min:200,max:250,n:5},
-      about:"A north-east London borough with a growing creative and maker economy around Walthamstow.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"stratford", name:"Stratford", x:1376, y:187,
+      buildings:["Runway East — Wardour Street","Boutique Workplace — Soho"]},
+    {id:"hackney", name:"Hackney & Bethnal Green", x:1140, y:177,
+      private:{avg:302,median:302,min:248,max:328,n:3}, coworking:{avg:200,min:200,max:200,n:1},
+      about:"Founders and creatives who'd rather spend the budget on people than postcode.",
+      bestFor:["Fast-growth tech & scaleups","Non-profits & social enterprises"],
+      buildings:["x+why — Hackney","Spacemade — Bethnal Green"]},
+    {id:"hammersmith", name:"Hammersmith", x:160, y:573,
+      private:{avg:493,median:493,min:215,max:1280,n:8}, coworking:{avg:371,min:255,max:480,n:5},
+      about:"Broadcasters and corporate HQs along the river — west London's answer to Canary Wharf, without the commute.",
+      bestFor:["Enterprise & corporate HQs","Creative & media"],
+      buildings:["Clockwise — Hammersmith","Landmark — Hammersmith Broadway"]},
+    {id:"stratford", name:"Stratford & Bow", x:1376, y:187,
       private:{avg:388,median:388,min:280,max:565,n:3}, coworking:{avg:295,min:295,max:295,n:2},
-      about:"East London’s Olympic legacy district, anchored by Westfield and the growing East Bank cultural quarter.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"vauxhall", name:"Vauxhall", x:746, y:621,
-      private:{avg:283,median:283,min:43,max:600,n:5}, coworking:{avg:500,min:500,max:500,n:1},
-      about:"A regenerating riverside area around Nine Elms and the US Embassy, with new-build offices and residential towers.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"enfield", name:"Enfield", x:700, y:5,
-      private:{avg:753,median:753,min:243,max:1417,n:5}, coworking:{avg:200,min:200,max:200,n:1},
-      about:"A north London borough town centre with a predominantly local and light-industrial business base.",
-      bestFor:[],
-      buildings:[]},
-    {id:"canary-wharf", name:"Canary Wharf", x:1326, y:454,
-      private:{avg:519,median:519,min:439,max:669,n:3}, coworking:{avg:255,min:255,max:255,n:1},
-      about:"London's purpose-built second financial centre, dominated by banking, professional services and towers.",
+      about:"Warehouses turned offices near the Olympic Park — space-hungry teams get more desk for less.",
+      bestFor:["Logistics & e-commerce","Enterprise & corporate HQs"],
+      buildings:["WorkLife — Stratford","Spacemade — Bow"]},
+    {id:"brixton", name:"Brixton & Herne Hill", x:822, y:903,
+      private:{avg:352,median:325,min:240,max:492,n:3}, coworking:{avg:22.5,min:20,max:25,n:2},
+      about:"Independent, community-rooted and unmistakably creative — a locality with its own gravity. (Pricing here is an old placeholder, not yet verified against the latest sourced data.)",
+      bestFor:["Non-profits & social enterprises","Creative & media"],
+      buildings:["x+why — Brixton","Huckletree — Herne Hill"]},
+    {id:"victoria", name:"Victoria & Westminster", x:671, y:533,
+      private:{avg:650,median:650,min:245,max:965,n:7}, coworking:{avg:430,min:289,max:450,n:5},
+      about:"Government, charities and corporate HQs — formal, well-connected, built for meetings that matter.",
+      bestFor:["Government & public sector","Enterprise & corporate HQs"],
+      buildings:["Landmark — Victoria","Fora — Victoria Street"]},
+    {id:"islington", name:"Islington & Angel", x:857, y:158,
+      private:{avg:392,median:392,min:141,max:696,n:14}, coworking:{avg:398,min:295,max:500,n:3},
+      about:"Media and agency crowd who want Shoreditch energy with a bit more hush.",
+      bestFor:["Creative & media","Fast-growth tech & scaleups"],
+      buildings:["Clockwise — Angel","Huckletree — Islington"]},
+    {id:"elephant", name:"Elephant & Castle", x:880, y:558,
+      private:{avg:453,median:453,min:306,max:600,n:2}, coworking:{avg:23.3,min:10,max:50,n:3},
+      about:"A regeneration zone turning into a genuine startup postcode, fast. (Pricing here is an old placeholder, not yet verified against the latest sourced data.)",
+      bestFor:["Fast-growth tech & scaleups","Non-profits & social enterprises"],
+      buildings:["x+why — Elephant & Castle","Spacemade — Elephant Park"]},
+    {id:"mayfair", name:"Mayfair", x:595, y:421,
+      private:{avg:982,median:982,min:326,max:2642,n:17}, coworking:{avg:750,min:700,max:800,n:2},
+      about:"Private equity, family offices and the occasional royal warrant — the priciest square mile for a reason.",
       bestFor:["Finance & fintech","Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"bermondsey", name:"Bermondsey", x:1096, y:533,
-      private:{avg:308,median:308,min:122,max:660,n:4}, coworking:{avg:420,min:420,max:420,n:1},
-      about:"A converted-warehouse district south of the river, popular with design, food and creative businesses.",
-      bestFor:["Creative & media"],
-      buildings:[]},
+      buildings:["Fora — Mayfair","Landmark — Berkeley Square"]},
+    {id:"canarywharf", name:"Canary Wharf", x:1326, y:454,
+      private:{avg:519,median:519,min:439,max:669,n:3}, coworking:{avg:255,min:255,max:255,n:1},
+      about:"Banking towers and glass atriums — built for teams who need scale, security and a trading floor down the hall.",
+      bestFor:["Finance & fintech","Enterprise & corporate HQs"],
+      buildings:["Clockwise — Canary Wharf","WorkLife — Canary Wharf"]},
     {id:"whitechapel", name:"Whitechapel", x:1108, y:322,
       private:{avg:200,median:200,min:200,max:200,n:1}, coworking:{avg:262,min:148,max:350,n:4},
-      about:"A fast-changing East End district, boosted by the Elizabeth line and a growing life-sciences presence.",
-      bestFor:["Healthcare & life sciences"],
-      buildings:[]},
-    {id:"wimbledon", name:"Wimbledon", x:100, y:1040,
-      private:{avg:360,median:360,min:330,max:415,n:3}, coworking:{avg:379,min:379,max:379,n:1},
-      about:"A prosperous south-west London town centre, best known for tennis, with a steady suburban office market.",
-      bestFor:[],
-      buildings:[]},
-    {id:"battersea", name:"Battersea", x:463, y:778,
-      private:{avg:596,median:596,min:582,max:609,n:2}, coworking:{avg:350,min:350,max:350,n:2},
-      about:"A riverside regeneration story centred on the restored Power Station and the surrounding Nine Elms development.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"poplar", name:"Poplar", x:1379, y:401,
-      private:{avg:227,median:227,min:177,max:253,n:3}, coworking:{avg:250,min:250,max:250,n:1},
-      about:"An east London area beside Canary Wharf, mixing docklands regeneration with maker and fashion workspace.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"merton-abbey", name:"Merton Abbey", x:350, y:1040,
-      private:{avg:232,median:232,min:232,max:232,n:1}, coworking:{avg:200,min:200,max:200,n:1},
-      about:"A south-west London industrial and heritage area along the River Wandle.",
-      bestFor:[],
-      buildings:[]},
-    {id:"westminster", name:"Westminster", x:650, y:505,
-      private:{avg:572,median:572,min:245,max:900,n:2}, coworking:{avg:450,min:450,max:450,n:1},
-      about:"The seat of government, with offices oriented toward policy, public affairs and associations.",
-      bestFor:["Professional & legal services"],
-      buildings:[]},
-    {id:"hackney-wick", name:"Hackney Wick", x:1374, y:91,
-      private:{avg:240,median:240,min:200,max:280,n:2}, coworking:{avg:225,min:200,max:250,n:2},
-      about:"A canalside cluster of artist studios and light industry, adjoining the Olympic Park.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"hackney", name:"Hackney", x:1140, y:177,
-      private:{avg:288,median:288,min:248,max:328,n:2}, coworking:{avg:200,min:200,max:200,n:1},
-      about:"A creative and independent east London borough, popular with studios, agencies and small enterprise.",
-      bestFor:["Creative & media","Fast-growth tech & scaleups"],
-      buildings:[]},
+      about:"Fintech and biotech spilling east from the City, at a fraction of the rent.",
+      bestFor:["Fast-growth tech & scaleups","Healthcare & life sciences"],
+      buildings:["x+why — Whitechapel","Spacemade — Whitechapel"]},
+    {id:"marylebone", name:"Marylebone", x:513, y:294,
+      private:{avg:857,median:857,min:220,max:3200,n:14}, coworking:{avg:347,min:148,max:450,n:7},
+      about:"Private healthcare, wealth managers and boutique firms — discreet, residential-feeling, very well-heeled.",
+      bestFor:["Healthcare & life sciences","Professional & legal services"],
+      buildings:["Fora — Marylebone","Landmark — New Cavendish Street"]}
   ];
 
   // Where this page hands traffic off to the actual listing pages. The 6
@@ -999,22 +919,26 @@
   // of trying to rank for "coworking space in X" themselves — this page's
   // job is comparison, not competing with our own listing pages.
   var AREA_LINKS = {
-    shoreditch:    "https://myhqspaces.com/gb/coworking/london/shoreditch",
-    "city-of-london": "https://myhqspaces.com/gb/coworking/london/city-of-london",
-    soho:          "https://myhqspaces.com/gb/coworking/london/soho",
-    victoria:      "https://myhqspaces.com/gb/coworking/london/victoria",
-    mayfair:       "https://myhqspaces.com/gb/coworking/london/mayfair",
-    "canary-wharf": "https://myhqspaces.com/gb/coworking/london/canary-wharf-estate",
-    holborn:       "https://myhqspaces.com/gb/coworking/london/central-london",
-    fitzrovia:     "https://myhqspaces.com/gb/coworking/london/central-london",
-    "covent-garden": "https://myhqspaces.com/gb/coworking/london/central-london",
-    camden:        "https://myhqspaces.com/gb/coworking/london/north-london",
-    hackney:       "https://myhqspaces.com/gb/coworking/london/east-london",
-    hammersmith:   "https://myhqspaces.com/gb/coworking/london/west-london",
-    stratford:     "https://myhqspaces.com/gb/coworking/london/east-london",
-    islington:     "https://myhqspaces.com/gb/coworking/london/north-london",
-    whitechapel:   "https://myhqspaces.com/gb/coworking/london/east-london",
-    marylebone:    "https://myhqspaces.com/gb/coworking/london/paddington"
+    shoreditch:  "https://myhqspaces.com/gb/coworking/london/shoreditch",
+    city:        "https://myhqspaces.com/gb/coworking/london/city-of-london",
+    soho:        "https://myhqspaces.com/gb/coworking/london/soho",
+    victoria:    "https://myhqspaces.com/gb/coworking/london/victoria",
+    mayfair:     "https://myhqspaces.com/gb/coworking/london/mayfair",
+    canarywharf: "https://myhqspaces.com/gb/coworking/london/canary-wharf-estate",
+    holborn:     "https://myhqspaces.com/gb/coworking/london/central-london",
+    fitzrovia:   "https://myhqspaces.com/gb/coworking/london/central-london",
+    farringdon:  "https://myhqspaces.com/gb/coworking/london/central-london",
+    covent:      "https://myhqspaces.com/gb/coworking/london/central-london",
+    borough:     "https://myhqspaces.com/gb/coworking/london/south-bank",
+    camden:      "https://myhqspaces.com/gb/coworking/london/north-london",
+    hackney:     "https://myhqspaces.com/gb/coworking/london/east-london",
+    hammersmith: "https://myhqspaces.com/gb/coworking/london/west-london",
+    stratford:   "https://myhqspaces.com/gb/coworking/london/east-london",
+    brixton:     "https://myhqspaces.com/gb/coworking/london/south-london",
+    islington:   "https://myhqspaces.com/gb/coworking/london/north-london",
+    elephant:    "https://myhqspaces.com/gb/coworking/london/south-london",
+    whitechapel: "https://myhqspaces.com/gb/coworking/london/east-london",
+    marylebone:  "https://myhqspaces.com/gb/coworking/london/paddington"
   };
   function byId(id){ for(var i=0;i<DATA.length;i++){ if(DATA[i].id===id) return DATA[i]; } return null; }
 
@@ -1159,8 +1083,8 @@
   // circles need — at the default full-extent view the price bubbles read
   // as small dots on a big map. Default view is now a closer-in window
   // centred on the dense core (Marylebone through Hackney, Camden through
-  // South Bank), with the outer areas (Hammersmith, Stratford,
-  // Canary Wharf, Wandsworth) still reachable by panning or zooming out —
+  // Elephant & Castle), with the outer areas (Hammersmith, Stratford,
+  // Canary Wharf, Brixton) still reachable by panning or zooming out —
   // nothing is cropped out of the data, just out of the default frame.
   var MIN_VIEW_W = 260, MAX_VIEW_W = BASEMAP_W;
   var DEFAULT_VIEW = { cx: 827, cy: 350, w: 820 };
@@ -1431,7 +1355,7 @@
         '<td><button class="pin-star '+(state.pinned.indexOf(d.id)>-1?"on":"")+'" aria-label="'+(state.pinned.indexOf(d.id)>-1?"Remove ":"Add ")+d.name+' to compare" title="'+(state.pinned.indexOf(d.id)>-1?"Remove from compare":"Add to compare")+'">'+(state.pinned.indexOf(d.id)>-1?"&#10003;":"&#43;")+'</button></td>'+
         '<td>'+
           '<div class="loc-name-row"><a class="loc-name" href="'+(AREA_LINKS[d.id]||"#")+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">'+d.name+'</a>'+(n<=2?'<span class="low-n">small sample</span>':'')+'</div>'+
-          '<div class="loc-top2">'+n+' flex space'+(n===1?"":"s")+(top2?' &middot; Popular: '+top2:'')+'</div>'+
+          '<div class="loc-top2">'+n+' flex space'+(n===1?"":"s")+' &middot; Popular: '+top2+'</div>'+
         '</td>'+
         '<td class="price-cell">'+fmt(teamPrice(v),product)+unitLabel(product)+'</td>';
       tr.addEventListener("click", function(){ togglePin(d.id); });
@@ -1494,9 +1418,9 @@
   // Seed set — the pattern scales to any pair in DATA, this is just the
   // first batch of comparisons worth surfacing as their own entries.
   var COMPARE_PAIRS = [
-    ["shoreditch","city-of-london"], ["city-of-london","canary-wharf"], ["mayfair","soho"],
+    ["shoreditch","city"], ["city","canarywharf"], ["mayfair","soho"],
     ["shoreditch","hackney"], ["victoria","mayfair"], ["islington","camden"],
-    ["clerkenwell","city-of-london"], ["canary-wharf","stratford"]
+    ["farringdon","city"], ["canarywharf","stratford"]
   ];
   // A dumbbell plot, not an accordion: both prices placed on ONE shared
   // scale (the full citywide min/max, same range the map legend uses) so
@@ -1545,9 +1469,7 @@
       var shared = a.bestFor.filter(function(t){ return b.bestFor.indexOf(t) > -1; });
       var angle = shared.length
         ? SHARED_ANGLES[i % SHARED_ANGLES.length](shared[0].toLowerCase())
-        : (a.bestFor[0] && b.bestFor[0]
-          ? (a.bestFor[0]+" teams lean towards "+shortName(a.name)+"; "+shortName(b.name)+" is more "+b.bestFor[0].toLowerCase()+".")
-          : "Different profile, same shortlist — worth comparing on price and commute alone.");
+        : (a.bestFor[0]+" teams lean towards "+shortName(a.name)+"; "+shortName(b.name)+" is more "+b.bestFor[0].toLowerCase()+".");
       var card = document.createElement("div");
       card.className = "pair-card";
       // Header names now follow the SAME left-to-right order as the track
@@ -1622,8 +1544,8 @@
     grid.innerHTML = "";
 
     // Shared axis across ALL localities so bar lengths are comparable card-to-card.
-    // The one Soho coworking outlier (£200/day, ~4x the next-highest) would otherwise
-    // squash every other bar to a sliver, so the axis caps at the 2nd-highest max and
+    // A single high-end outlier listing would otherwise squash every other bar to a
+    // sliver, so the axis caps at the 2nd-highest max and
     // any bar beyond that is visually clipped (the real number still shows in text).
     var allMax = DATA.map(function(x){ return rangeOf(x, product).max; }).sort(function(a,b){return a-b;});
     var axisMax = allMax[allMax.length - 2] || allMax[allMax.length - 1];
@@ -1649,14 +1571,14 @@
         "</div>"+
         "<hr class='card-divider'>"+
         "<p class='about-text'>"+d.about+"</p>"+
-        (d.buildings.length ? "<hr class='card-divider'>"+
-        "<div><p class='buildings-label'>Most popular here</p><ul class='buildings-list'>"+d.buildings.slice(0,2).map(function(b){ return "<li>"+ICON_BUILDING+b+"</li>"; }).join("")+"</ul></div>" : "");
+        "<hr class='card-divider'>"+
+        "<div><p class='buildings-label'>Most popular here</p><ul class='buildings-list'>"+d.buildings.slice(0,2).map(function(b){ return "<li>"+ICON_BUILDING+b+"</li>"; }).join("")+"</ul></div>";
       grid.appendChild(card);
     });
     picks.sort(function(a,b){ return priceOf(b,product) - priceOf(a,product); });
     var hi = picks[0], lo = picks[picks.length-1];
     var ratio = (priceOf(hi,product) / priceOf(lo,product));
-    var noun = product === "private" ? "private desk" : "dedicated desk";
+    var noun = product === "private" ? "private desk" : "coworking desk";
     var sentence = "A "+noun+" in "+hi.name+" costs "+ratio.toFixed(1)+"&times; more than in "+lo.name+" — about "+fmt(priceOf(hi,product)-priceOf(lo,product),product)+" more per desk, per month, before you factor in commute and clientele.";
     if(state.teamSize > 1){
       sentence += " For your team of "+state.teamSize+", that gap is roughly "+fmt(teamPrice(priceOf(hi,product)-priceOf(lo,product)),product)+"/mo.";
