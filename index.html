@@ -1472,7 +1472,6 @@
             "<tr class='is-cheaper'><td><a href='"+(AREA_LINKS[left.d.id]||'#')+"' target='_blank' rel='noopener'>"+left.d.name+"</a></td><td>"+fmt(teamPrice(left.v),product)+"</td><td>"+fitLabel(left.d)+"</td></tr>"+
             "<tr><td><a href='"+(AREA_LINKS[right.d.id]||'#')+"' target='_blank' rel='noopener'>"+right.d.name+"</a></td><td>"+fmt(teamPrice(right.v),product)+"</td><td>"+fitLabel(right.d)+"</td></tr>"+
           "</tbody></table>"+
-        "<p class='mini-verdict'>"+verdict+"</p>"+
         "<button type='button' class='mini-pair-action'>Add both to comparison</button>";
       block.querySelector(".mini-pair-action").addEventListener("click", function(){
         state.pinned = [left.d.id, right.d.id];
