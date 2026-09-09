@@ -244,7 +244,7 @@
   .stepper button:active { background: var(--line-bold); }
   .stepper input[type=number] {
     width: 52px; height: 34px; border: none; border-left: 1px solid var(--line); border-right: 1px solid var(--line);
-    text-align: center; font: 600 0.95rem var(--font-family); color: var(--ink);
+    text-align: center; font: 600 0.95rem var(--font-family); color: var(--ink); background: var(--white);
     -moz-appearance: textfield;
   }
   .stepper input[type=number]::-webkit-outer-spin-button,
@@ -1472,7 +1472,7 @@
             "<tr class='is-cheaper'><td><a href='"+(AREA_LINKS[left.d.id]||'#')+"' target='_blank' rel='noopener'>"+left.d.name+"</a></td><td>"+fmt(teamPrice(left.v),product)+"</td><td>"+fitLabel(left.d)+"</td></tr>"+
             "<tr><td><a href='"+(AREA_LINKS[right.d.id]||'#')+"' target='_blank' rel='noopener'>"+right.d.name+"</a></td><td>"+fmt(teamPrice(right.v),product)+"</td><td>"+fitLabel(right.d)+"</td></tr>"+
           "</tbody></table>"+
-        "<p class='mini-verdict'><b>Lower-priced choice: "+shortName(left.d.name)+".</b> "+verdict+"</p>"+
+        "<p class='mini-verdict'>"+verdict+"</p>"+
         "<button type='button' class='mini-pair-action'>Add both to comparison</button>";
       block.querySelector(".mini-pair-action").addEventListener("click", function(){
         state.pinned = [left.d.id, right.d.id];
