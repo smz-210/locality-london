@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<!doctype html><html><head><!-- frame-runtime --><script>window.__FRAME_PREAMBLE={"v":1,"capabilities":{"artifact":"artifact.B_zN8nKT.js","assets":"assets.8Gk803W0.js","comments":"comments.hEoja5zd.js","db":"db.DoKNwgX8.js","downloads":"downloads.th1YuAIk.js","embed":"embed.eqL6deQM.js","endpoints":"endpoints.CooJFPzL.js","mcp":"mcp.Ch3NPscy.js","network":"network.B5UA9Su4.js","permissions":"permissions.BNySkLV5.js","room":"room.Dc3WDo3b.js","sample":"sample.C2869FGz.js","self":"artifact.B_zN8nKT.js","user":"user.BpKav-Rf.js"},"transforms":"_transforms.Cil6ankx.js","comments":"_comments.e5-ml_Nr.js","translate":"_translate.5HCW4BJh.js","ldx":"_ldx.DycbNc-Q.js"}</script><script>(function(){"use strict";var fe=["light","dark","system"],de=/^[A-Za-z0-9_-]{1,64}$/,te=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,pe=new Set(["class","hidden","value","checked","style","title","alt","placeholder","lang","dir","role","tabindex","disabled","readonly","contenteditable","open","colspan","rowspan"]);function me(e){const t=e.toLowerCase();return t.startsWith("data-")||t.startsWith("aria-")||pe.has(t)}var $e="http://www.w3.org/1999/xhtml",he="http://www.w3.org/2000/svg",_e=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),ve=new Set(["script","style"]);function ye(e){const t=e.localName.toLowerCase();return e.namespaceURI==="http://www.w3.org/1999/xhtml"?!_e.has(t):e.namespaceURI===he?!ve.has(t):!1}function x(e,t){return e===t||(e===160||e===32)&&(t===160||t===32)}function we(e,t){const r=e.length,n=t.length;let a=0;for(;a<r&&a<n&&x(e.charCodeAt(a),t.charCodeAt(a));)a++;let o=0;for(;o<r-a&&o<n-a&&x(e.charCodeAt(r-1-o),t.charCodeAt(n-1-o));)o++;return{p:a,s:o}}function Ee(e,t){const r=e.firstChild;if(e.childNodes.length!==1||r===null||r.nodeType!==Node.TEXT_NODE){e.textContent=t;return}const n=r.data,a=n.length,o=t.length,{p:c,s:i}=we(n,t);c===a&&i===0&&a===o||r.replaceData(c,a-c-i,t.slice(c,o-i));const m=r.data,f=e.ownerDocument.getSelection?.()??null,y=f!==null&&f.rangeCount>0&&(f.anchorNode===r||f.focusNode===r)?{anchor:f.anchorNode,anchorOffset:f.anchorOffset,focus:f.focusNode,focusOffset:f.focusOffset}:null;let d=-1,E=-1;for(let v=0;v<m.length&&v<t.length;v++){const A=m.charCodeAt(v),k=t.charCodeAt(v);A!==k&&x(A,k)&&(d<0&&(d=v),E=v)}const b=d>=0;if(b&&r.replaceData(d,E-d+1,t.slice(d,E+1)),b&&y!==null&&y.anchor!==null&&y.focus!==null)try{f.setBaseAndExtent(y.anchor,y.anchorOffset,y.focus,y.focusOffset)}catch{}}var be=new Set(["html","head","body","frameset"]);function ge(e){return e.namespaceURI==="http://www.w3.org/1999/xhtml"&&be.has(e.localName)}function Ae(e){if(e===null||typeof e!="object")return!1;const t=e;if(typeof t.target!="string"||!de.test(t.target)||t.text!==void 0&&typeof t.text!="string")return!1;if(t.attrsSet!==void 0){if(t.attrsSet===null||typeof t.attrsSet!="object")return!1;for(const[r,n]of Object.entries(t.attrsSet))if(!te.test(r)||typeof n!="string")return!1}if(t.attrsRemoved!==void 0){if(!Array.isArray(t.attrsRemoved))return!1;for(const r of t.attrsRemoved)if(typeof r!="string"||!te.test(r))return!1}return!0}function Le(e,t){if(e===null||typeof e!="object")return!1;const{seq:r,elements:n}=e;if(typeof r!="number"||!Number.isSafeInteger(r)||!Array.isArray(n)||n.length===0||n.length>64)return!1;for(let a=0;a<n.length;a++)if(!t(n[a]))return!1;return!0}function Te(e){return e===null||typeof e!="object"?!1:Le(e.__frame_patch,Ae)}function Se(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_init;return t!==null&&typeof t=="object"}function Re(e){return e!==null&&typeof e=="object"&&e.__frame_size_poke===!0}function ke(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_theme;if(t===null||typeof t!="object")return!1;const r=t.theme;return typeof r=="string"&&fe.includes(r)}var O=/^[\w.-]+\.js$/;function Pe(e,t,r){return r?"inert":typeof t=="string"&&O.test(t)?e?[t]:"inert":e?"inert":"framed"}var Ye="frame_ldx_runtime",Oe="frame_ldx_build",Ge="script#an-form";function Ce(){return{post(e,t){parent.postMessage(e,t)},on(e){const t=r=>{r.source===parent&&e(r.data,r.origin,r.isTrusted)};return addEventListener("message",t),()=>removeEventListener("message",t)}}}function Me(){return{post:()=>{},on:()=>()=>{}}}var F="__frame_scroll",je=150,Ne=310,De=160,Be=3e4;function Ie(){let e=0,t=!1,r=!1,n=!1,a=0,o=null;const c=u=>{try{sessionStorage.setItem(F,JSON.stringify({y:u}))}catch{}},i=()=>{if(clearTimeout(e),o===null)return;const u=o;o=null,c(u)},m=()=>{if(t){t=!1;return}r=!0,o=scrollY,clearTimeout(e),e=setTimeout(i,je)};try{addEventListener("scroll",m,{passive:!0}),addEventListener("pagehide",i)}catch{}const f=()=>{let u;try{u=sessionStorage.getItem(F)}catch{return null}if(u===null)return null;let g;try{g=JSON.parse(u)}catch{g=null}const w=g?.y;if(!(typeof w=="number"&&Number.isFinite(w)&&w>=0)){try{sessionStorage.removeItem(F)}catch{}return null}return w};let y=!1;const d=u=>{try{const g=scrollY;scrollTo({top:u,left:0,behavior:"instant"}),a=u,n=!0,clearTimeout(e),o=null,c(u);const w=scrollY;w!==g&&(t=!0),w!==u&&!y&&(y=!0,addEventListener("load",()=>{try{if(scrollY===w){const M=f();d(M!==null?M:a)}}catch{}},{once:!0}))}catch{}},E=()=>{try{return!!location.hash}catch{return!0}};let b=!1;const v=()=>{try{if(b||innerWidth>Ne||innerHeight>De)return;b=!0;const u=Date.now(),g=()=>{try{removeEventListener("resize",g)}catch{}if(Date.now()-u>Be||r||E())return;const w=f();d(w!==null?w:a)};addEventListener("resize",g)}catch{}};let A=!1,k=!1;return{restore(){if(A||(A=!0,E()))return;const u=f();u!==null&&(d(u),v())},promoted(){if(k||(k=!0,E()))return;const u=f();u!==null?(d(u),v()):n&&d(a)}}}function Ue(e,t,r,n){let a=null;try{a=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:m=>m})??null}catch{}const o=window.Worker,c=o?.prototype,i=Object.freeze({Worker:o,workerOn:c?.addEventListener,workerPost:c?.postMessage,workerTerminate:c?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,policy:a,origins:t});r(e).then(m=>m?.bootTopLevel?m.bootTopLevel(i,n):n.settle()).catch(()=>n.settle())}var Ve="modulepreload",Ze=function(e){return"/"+e},Je={},xe=function(t,r,n){let a=Promise.resolve();function o(c){const i=new Event("vite:preloadError",{cancelable:!0});if(i.payload=c,window.dispatchEvent(i),!i.defaultPrevented)throw c}return a.then(c=>{for(const i of c||[])i.status==="rejected"&&o(i.reason);return t().catch(o)})},Fe=window===top,re=Object.getOwnPropertyDescriptor(window,"claude"),j=Pe(Fe,window.__FRAME_PREAMBLE?.topLevel,re?.writable===!1),H=typeof j=="object"&&j[0],_=H?Me():Ce();(function(){const e=Object.defineProperty,t=globalThis,r=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let n=0;for(let a=0;a<r.length;a++){const o=r[a];try{e(t,o,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[o]}catch{}try{e(t,o,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[o]=="function"&&n++}if(n&&j==="framed")try{_.post({__frame_rtc_lockdown_failed:n},"*")}catch{}})();var He=1e4,ze=2e3,We=2e3,ne=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function oe(e){for(const t of ne)if(t.endsWith(":*"))try{const r=new URL(e);if(`${r.protocol}//${r.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}var N=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),z=window.__FRAME_PREAMBLE?.transforms,W=window.__FRAME_PREAMBLE?.comments,q=window.__FRAME_PREAMBLE?.translate,K=window.__FRAME_PREAMBLE?.ldx;function C(e){return xe(()=>import("/_runtime/"+e),void 0)}function se(e,t){return{contract:e.contract,changes:new Set(e.changes??[]),flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:new Map,shellOrigin:t,mount:Y,hooks:B,pipe:()=>({wrap:(r,n)=>(...a)=>{try{return n(...a)}catch(o){return Promise.reject(o)}}})}}var D=null,S=null;function ae(e,t,r){try{Object.defineProperty(e,t,{value:r,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:r,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var X=!1,B={editBefore:null,edit:null};function qe(e,t,r=!1){const n=[];let a;if(r)try{B.editBefore?.(e)}catch{}for(const o of e.elements){const c=document.querySelector(`[data-id="${o.target}"]`);if(!c){a=o.target;break}if([...Object.keys(o.attrsSet??{}),...o.attrsRemoved??[]].some(i=>!me(i))){a=o.target;break}if(o.text!==void 0&&(!ye(c)||ge(c))){a=o.target;break}for(const[i,m]of Object.entries(o.attrsSet??{}))if(!ce(c,i)){try{c.setAttribute(i,m)}catch{}ie(c,i,m)}for(const i of o.attrsRemoved??[])ce(c,i)||(c.removeAttribute(i),ie(c,i,null));typeof o.text=="string"&&Ee(c,o.text),n.push(o.target)}if(r)try{B.edit?.(e.seq,n,a)}catch{}if(a!==void 0){_.post({__frame_patch_miss:{seq:e.seq}},t);return}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:e.seq,targets:n}}))}catch{}}function ie(e,t,r){if(!(e instanceof HTMLInputElement))return;const n=t.toLowerCase();n==="checked"?e.checked=r!==null:n==="value"&&e.type!=="file"&&(e.value=r??"")}function ce(e,t){const r=t.toLowerCase(),n=e;return r==="data-id"||(r==="value"||r==="checked")&&(n.__artifactSecret===!0||/^(password|hidden|file)$/.test(n.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${e.getAttribute("autocomplete")??""} ${n.autocomplete??""}`))}function le(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,X=!0):X&&(delete t.dataset.theme,t.style.colorScheme="",X=!1)}var I=new Map;function Ke(){let e;const t={u:new Promise(r=>{e=r}),r:r=>{t.done=!0,e(r)},done:!1,nulled:!1};return t}function $(){for(const e of I.values())e.done||(e.nulled=!0,e.r(null))}var Xe=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),Y=(e,t)=>{const r=I.get(e);if(!r||r.done){r?.nulled&&S&&_.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:e}},S);return}const n=typeof t=="function"?Object.setPrototypeOf(t,Xe):Object.assign(Object.create(null),t);typeof n.then=="function"&&delete n.then,r.r(Object.freeze(n))};function ue(){const e=re?.value??{};ae(window,"claude",e);for(const t of Object.keys(N)){if(e[t]!==void 0){ae(e,t,e[t]);continue}I.set(t,Ke())}if(e.use===void 0){const t=r=>{if(typeof r!="string"||!Object.hasOwn(N,r))return Promise.resolve(null);const n=I.get(r);return n?n.u:Promise.resolve(e[r]??null)};try{Object.defineProperty(e,"use",{value:t,writable:!0,configurable:!0,enumerable:!1})}catch{}}}if(j==="framed"){const e=z&&O.test(z)?C(z).catch(()=>{}):Promise.resolve(void 0),t=s=>{if(s.type==="auxclick"&&s.button!==1)return;const h=s.target,p=h&&h.closest?h.closest("a[href],area[href]"):null;if(!p)return;const P=p.getAttribute("href");if(!P)return;let L;try{L=new URL(P,document.baseURI)}catch{return}if((L.protocol==="http:"||L.protocol==="https:")&&L.origin!==location.origin){s.preventDefault();const R=(p.getAttribute("target")??"").toLowerCase(),T=s.type==="auxclick"||s.metaKey||s.ctrlKey||s.shiftKey||s.altKey||!["","_self","_top","_parent"].includes(R);_.post({__frame_nav:!0,url:L.href,newTab:T},"*")}};addEventListener("click",t,!0),addEventListener("auxclick",t,!0);const r={},n=s=>{s.isTrusted&&(r.pointer=!0)},a=s=>{s.isTrusted&&(r.click=!0)};addEventListener("pointermove",n,{capture:!0,passive:!0}),addEventListener("click",a,{capture:!0,passive:!0});const o={cb:null};addEventListener("keydown",s=>o.cb?.(s),!0),e.then(s=>s?.installEscapeForward?.(o,h=>{S&&_.post(h,S)})),e.then(s=>{s?.wireNav&&(s.wireNav(),removeEventListener("click",t,!0),removeEventListener("auxclick",t,!0),removeEventListener("pointermove",n,!0),removeEventListener("click",a,!0),s.wireEngagement?.(r))});let c=null;try{c=Ie()}catch{}ue();let i=null,m=null,f=0;const y=_.on((s,h)=>{oe(h)&&Se(s)&&(i=s.__frame_init,S=h,y(),clearTimeout(f),m?.())});_.post({__frame_connect:!0},"*");const d=setTimeout,E=clearTimeout;let b=0;const v=()=>{try{_.post({__frame_alive:!0},"*")}catch{}b=d(v,ze)},A=()=>E(b);v(),addEventListener("load",A,{once:!0});const k=new Promise(s=>{m=s,f=setTimeout(()=>{y(),s()},He)}),u=document.readyState==="loading"?new Promise(s=>document.addEventListener("DOMContentLoaded",()=>s(),{once:!0})):Promise.resolve(),g=new WeakSet;addEventListener("error",s=>{s.target&&g.add(s.target)},!0);const w=()=>{let s=[];try{s=[...document.querySelectorAll("link[rel~=stylesheet]:not([rel~=alternate])")].filter(p=>!p.sheet&&!p.disabled&&!g.has(p)&&p.getAttribute("href")&&URL.canParse(p.href)&&(!p.media||matchMedia(p.media).matches))}catch{}let h=s.length;return h===0?Promise.resolve():new Promise(p=>{try{const P=d(p,We),L=()=>{--h===0&&(E(P),p())};for(const R of s)R.addEventListener("load",L,{once:!0}),R.addEventListener("error",L,{once:!0})}catch{p()}})};u.then(()=>{try{c?.restore()}catch{}});const M={cb:null};_.on((s,h)=>{if(oe(h)&&Re(s)){try{c?.promoted()}catch{}M.cb?.()}}),k.then(async()=>{if(!i||!S){$();return}le(i.theme);const s=S;let h=!1,p=!1;_.on((l,Z,U)=>{if(Z!==s)return;ke(l)&&le(l.__frame_theme.theme),Te(l)&&qe(l.__frame_patch,s,U);const J=l?.__fc_mode;J&&typeof J=="object"&&!h&&W&&O.test(W)&&(h=!0,C(W).then(ee=>ee.install?.(s,J.on===!0)).catch(()=>{}));const Q=l?.__ft_cmd;Q&&typeof Q=="object"&&!p&&q&&O.test(q)&&(p=!0,C(q).then(ee=>ee.install?.(s,Q)).catch(()=>{}))});const P=Object.keys(i.capabilities??{}).filter(l=>Object.hasOwn(N,l)).map(l=>[l,N[l]]).filter(l=>typeof l[1]=="string"&&O.test(l[1])),L=await Promise.allSettled(P.map(([,l])=>C(l))),R=await e,T=S;if(R?.buildBoot||_.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},T),R?.buildBoot)try{D=R.buildBoot(i,R.TRANSFORMS??{},{shellOrigin:T,mount:Y,hooks:B},l=>_.post({__frame_cap_telemetry:l},T))}catch{_.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},T),D=se(i,T)}else D=se(i,T);const G=l=>_.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:l}},T),V=D;L.forEach((l,Z)=>{const U=P[Z][0];if(l.status!=="fulfilled"){G(U);return}try{l.value?.install?.(V)}catch{G(U)}}),$(),await u,await w(),A(),_.post({__frame_ready:!0},S),e.then(l=>l?.installSizeReporter?.(T,M)),V.flags.has("frame_ldx_runtime")&&K&&O.test(K)&&document.querySelector("script#an-form")&&C(K).then(l=>l?.boot?.({shellOrigin:s,build:V.flags.has(Oe)})).catch(()=>!1).then(l=>{l!==!0&&G("_ldx")})})}else H&&(ue(),Ue(H,ne,C,{settle:$,mount:Y}))})();</script><!-- /frame-runtime --><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>London Workspace Price Map (Copy)</title>
 <style>
   @font-face {
@@ -169,7 +169,7 @@
   .toggle button.active { color: var(--on-dark); }
   /* Left/width are set from JS to match each button's real content width —
      the two labels are very different lengths ("Private office · £/desk/mo"
-     vs "Dedicated Desk · £/month"), so a fixed 50/50 split left the longer label's
+     vs "Coworking · £/desk/mo"), so a fixed 50/50 split left the longer label's
      white active-state text spilling past the pill onto white background
      and disappearing. */
   .toggle .indicator {
@@ -233,7 +233,30 @@
     font: 600 0.68rem var(--font-family); text-transform: uppercase; letter-spacing: 0.08em;
     color: var(--ink-faint); white-space: nowrap;
   }
-  .teambar input[type=range] { flex: 1; min-width: 120px; max-width: 320px; accent-color: var(--accent); }
+  .stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .stepper button {
+    appearance: none; border: none; background: var(--surface-2); cursor: pointer;
+    width: 34px; height: 34px; font: 600 16px/1 var(--font-family); color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 120ms ease-out;
+  }
+  .stepper button:hover { background: var(--line); }
+  .stepper button:active { background: var(--line-bold); }
+  .stepper input[type=number] {
+    width: 52px; height: 34px; border: none; border-left: 1px solid var(--line); border-right: 1px solid var(--line);
+    text-align: center; font: 600 0.95rem var(--font-family); color: var(--ink);
+    -moz-appearance: textfield;
+  }
+  .stepper input[type=number]::-webkit-outer-spin-button,
+  .stepper input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .quick-sizes { display: flex; gap: 6px; }
+  .quick-size-btn {
+    appearance: none; border: 1px solid var(--line); background: var(--white); cursor: pointer;
+    border-radius: 999px; padding: 5px 12px; font: 600 0.78rem var(--font-family); color: var(--ink-soft);
+    transition: background 120ms ease-out, color 120ms ease-out, border-color 120ms ease-out;
+  }
+  .quick-size-btn:hover { border-color: var(--primary); color: var(--primary); }
+  .quick-size-btn.active { background: var(--primary); border-color: var(--primary); color: var(--on-dark); }
   .teambar-val {
     font-variant-numeric: tabular-nums; font-weight: 600; font-size: 1.15rem; color: var(--ink); min-width: 70px;
   }
@@ -472,97 +495,71 @@
   /* ---------- Which area fits your team? (persona section) ---------- */
   .personas h2, .compare-areas h2 { font-family: var(--font-family); font-weight: 600; font-size: clamp(1.4rem, 2vw, 1.7rem); letter-spacing: -0.005em; margin: 0 0 4px; }
   .section-intro { color: var(--ink-soft); font-size: 0.95rem; max-width: 62ch; margin: 0; }
-  /* 6 cards, exactly 3 columns — the old minmax(230px) fit 4 across at
-     typical widths, leaving 6 cards as an orphaned 4+2 split with a
-     visible gap under columns 3-4. A wider min-width forces a clean 3x2. */
-  .persona-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px 32px; margin-top: 22px; }
-  .persona-card { padding-top: 14px; border-top: 1px solid var(--line); }
-  .persona-card h3 { margin: 0 0 7px; font-size: 1.05rem; font-weight: 600; color: var(--ink); letter-spacing: -0.005em; }
+  /* Profile-led cards make this section feel like a guided choice, while the
+     following section remains the analytical comparison area. */
+  .persona-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 24px; }
+  .persona-card { position: relative; overflow: hidden; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 5px 18px rgba(31,35,56,.06); transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
+  .persona-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: var(--primary); }
+  .persona-card:nth-child(2)::before, .persona-card:nth-child(5)::before { background: #8b5cf6; }
+  .persona-card:nth-child(3)::before, .persona-card:nth-child(6)::before { background: #0f766e; }
+  .persona-card:hover { transform: translateY(-3px); border-color: var(--primary); box-shadow: 0 10px 26px rgba(31,35,56,.11); }
+  .persona-card h3 { margin: 5px 0 8px; font-size: 1.05rem; font-weight: 650; color: var(--ink); letter-spacing: -0.005em; }
   .persona-card p { margin: 0; font-size: 0.87rem; color: var(--ink-soft); line-height: 1.55; }
   .persona-card p a { color: var(--primary); font-weight: 600; text-decoration: none; }
   .persona-card p a:hover { text-decoration: underline; }
-  .persona-blurb { margin-bottom: 10px !important; }
-  /* Splits the descriptive sentence from the actual data (the linked area
-     list) — previously one run-on paragraph made the useful part (which
-     areas, which prices) hard to pick out from the framing sentence. */
-  .matches-label {
-    display: block; font: 600 0.64rem var(--font-family); text-transform: uppercase; letter-spacing: 0.08em;
-    color: var(--ink-faint); margin-bottom: 5px;
-  }
-  /* A real row per match — name left, price right, tabular figures — so
-     the actual data reads as data instead of hiding inside a sentence. */
-  .persona-matches { display: flex; flex-direction: column; }
-  .match-row {
-    display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
-    padding: 6px 0; border-bottom: 1px solid var(--line);
-  }
+  .persona-blurb { margin-bottom: 16px !important; }
+  .persona-eyebrow { display: block; font: 600 0.62rem var(--font-family); text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-faint); }
+  .featured-match { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 14px; border-radius: 10px; background: var(--accent-wash); }
+  .featured-match .match-copy { gap: 3px; }
+  .featured-match a { color: var(--ink); font-size: 0.94rem; font-weight: 650; text-decoration: none; }
+  .featured-match a:hover { color: var(--primary); }
+  .featured-price { color: var(--ink); font-size: 0.92rem; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .featured-label { display: block; font-size: 0.64rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+  .persona-more { margin-top: 12px; border: 0; }
+  .persona-more summary { padding: 5px 0; color: var(--primary); font-size: 0.78rem; font-weight: 650; }
+  .persona-more summary::after { font-size: 1rem; }
+  .persona-more details { border: 0; }
+  .persona-matches { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+  .match-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); }
   .match-row:last-child { border-bottom: none; }
-  .match-row a { font-size: 0.87rem; color: var(--primary); font-weight: 600; text-decoration: none; }
+  .match-row a { font-size: 0.82rem; color: var(--primary); font-weight: 600; text-decoration: none; }
   .match-row a:hover { text-decoration: underline; }
-  .match-price { font-size: 0.84rem; font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .match-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .match-role { font-size: 0.61rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+  .match-price { font-size: 0.8rem; font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .persona-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; margin-top: 28px; padding: 18px 20px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; }
+  .persona-cta-copy strong { display: block; color: var(--ink); font-size: 0.98rem; }
+  .persona-cta-copy span { display: block; margin-top: 3px; color: var(--ink-soft); font-size: 0.84rem; }
+  .persona-cta button { flex: none; }
 
-  /* ---------- Area-vs-area comparisons: a dumbbell, not an FAQ row ---------- */
-  /* This content is a head-to-head numeric comparison, not a Q&A — dressing
-     it as a click-to-expand accordion (identical to "Common questions" right
-     below it) buried the one thing worth seeing at a glance: where two
-     prices sit relative to each other. A dumbbell plot shows that directly,
-     with no click required. Reuses the same surface-2 card look as the
-     click-to-compare drawer elsewhere on the page, so "comparing areas"
-     has one consistent visual language site-wide instead of a new style. */
-  .pair-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 20px 28px; margin-top: 24px; }
-  .pair-card { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 20px; }
-  /* Real air between the header and the track below it — this row and the
-     track were sitting close enough to read as one clashing block. */
-  .pair-names { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 30px; }
-  .pair-names a { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: 0.95rem; color: var(--ink); text-decoration: none; }
-  .pair-names a:hover { color: var(--primary); text-decoration: underline; }
-  /* The name is no longer repeated on the track below — this dot is the
-     only link between a header name and its price marker, colour-matched
-     to the same dot on the track (filled = cheaper, hollow = pricier). */
-  .pair-mark { width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--line-bold); }
-  .pair-mark.cheap { background: var(--primary); }
-  /* A real badge, not a bare word floating between two headings — "vs" was
-     getting lost against busier text right above and below it. */
-  .pair-vs {
-    font: 700 0.64rem var(--font-family); text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint);
-    flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--white); border: 1px solid var(--line);
-    display: flex; align-items: center; justify-content: center;
+  /* ---------- Area-vs-area comparisons: separate two-row tables ---------- */
+  .mini-pair-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 36px; margin-top: 24px; }
+  .mini-pair { min-width: 0; padding-top: 14px; border-top: 2px solid var(--line); }
+  .mini-pair-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+  .mini-pair-head h3 { margin: 0; font-size: 1rem; font-weight: 600; color: var(--ink); }
+  .mini-saving { color: var(--primary); font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
+  .mini-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 0.84rem; }
+  .mini-table caption { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .mini-table th { padding: 8px 9px; color: var(--ink-faint); font-size: 0.66rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; text-align: left; border-bottom: 1px solid var(--line); }
+  .mini-table th:nth-child(1) { width: 40%; }
+  .mini-table th:nth-child(2) { width: 24%; text-align: right; }
+  .mini-table th:nth-child(3) { width: 36%; }
+  .mini-table td { padding: 10px 9px; color: var(--ink-soft); vertical-align: top; border-bottom: 1px solid var(--line); line-height: 1.4; }
+  .mini-table td:nth-child(2) { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink); }
+  .mini-table .is-cheaper td { background: var(--accent-wash); }
+  .mini-table a { color: var(--ink); font-weight: 600; text-decoration: none; }
+  .mini-table a:hover { color: var(--primary); text-decoration: underline; }
+  .mini-verdict { margin: 9px 0 0; color: var(--ink-soft); font-size: 0.82rem; line-height: 1.45; }
+  .mini-verdict b { color: var(--ink); font-weight: 600; }
+  .mini-pair-action { margin-top: 9px; padding: 0; border: 0; background: none; color: var(--primary); font: 600 0.78rem var(--font-family); cursor: pointer; }
+  .mini-pair-action:hover { text-decoration: underline; }
+  @media (max-width: 820px) { .mini-pair-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) {
+    .mini-pair-head { align-items: flex-start; flex-direction: column; gap: 4px; }
+    .mini-table th:nth-child(1) { width: 38%; }
+    .mini-table th:nth-child(2) { width: 28%; }
+    .mini-table th:nth-child(3) { width: 34%; }
   }
-  .pair-track { position: relative; height: 4px; background: var(--line); border-radius: 2px; margin: 34px 8px 40px; }
-  /* min-width so a very close pair (a tiny gap in £ terms) still shows a
-     visible sliver instead of an almost-invisible line — the width still
-     scales with the real gap for every pair wide enough to need it. */
-  .pair-fill { position: absolute; top: 0; bottom: 0; min-width: 3px; background: var(--accent); border-radius: 2px; opacity: 0.4; }
-  /* Flat marks, not slider thumbs — no white ring / halo mimicking a
-     draggable OS control on a static chart (this isn't interactive). Colour
-     matches the .pair-mark next to that area's name in the header above. */
-  .pair-dot {
-    position: absolute; top: 50%; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; border-radius: 50%;
-    background: var(--line-bold);
-  }
-  .pair-dot.cheap { background: var(--primary); width: 10px; height: 10px; margin: -5px 0 0 -5px; }
-  /* The same £min-£max endpoints on every card — makes explicit that every
-     track shares one citywide scale, not a private per-card 0-1 range. */
-  .pair-scale-end {
-    position: absolute; bottom: -18px; font-size: 0.66rem; color: var(--ink-faint); font-variant-numeric: tabular-nums;
-  }
-  .pair-scale-end.left { left: 0; }
-  .pair-scale-end.right { right: 0; }
-  /* Price only, one line — the name printed a second time here (on top of
-     the header) was the actual source of the clutter, not the spacing. */
-  .pair-price {
-    position: absolute; transform: translateX(-50%); white-space: nowrap;
-    font-size: 0.95rem; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums;
-  }
-  .pair-price.above { bottom: 12px; }
-  .pair-price.below { top: 12px; }
-  /* Anchor to the inside edge instead of centring once a dot sits close
-     enough to either end of the track — a centred label there can overhang
-     the card boundary, worse with a longer area name. */
-  .pair-price.edge-left { transform: none; text-align: left; }
-  .pair-price.edge-right { transform: translateX(-100%); text-align: right; }
-  .pair-angle { margin: 0; font-size: 0.86rem; color: var(--ink-soft); line-height: 1.55; }
-  .pair-angle b { color: var(--ink); font-weight: 600; }
 
   /* ---------- How do areas compare? (reuses the FAQ's details/summary look) ---------- */
   .compare-areas details p a, .faq details p a { color: var(--primary); font-weight: 600; text-decoration: none; }
@@ -605,10 +602,10 @@
 <div class="sec-hero">
   <div class="wrap">
     <header class="masthead">
-      <p class="eyebrow">Price map &amp; comparison tool</p>
-      <h1>London flexible office guide</h1>
-      <p class="sub">See how private-office and dedicated-desk prices vary across 36 London localities — from London Borough of Waltham Forest at £222/desk/month to Mayfair at £982 — so you can compare neighbourhoods before you compare buildings.</p>
-      <button class="cta-primary" id="heroCta">Talk to a workspace advisor</button>
+      <p class="eyebrow">London office price comparison tool</p>
+      <h1>London office price map: compare costs by area</h1>
+      <p class="sub">Compare average private office and coworking or fixed-desk prices across more than 40 London localities. Private office averages range from £209 per desk per month in Lewisham to £982 in Mayfair. Use the workspace toggle to compare areas, explore lower-cost locations and identify options that suit your team and budget.</p>
+      <button class="cta-primary" id="heroCta">Speak to an office space advisor</button>
     </header>
   </div>
 </div>
@@ -621,7 +618,7 @@
           <div class="toggle" id="productToggle">
             <div class="indicator" id="toggleIndicator"></div>
             <button data-product="private" class="active">Private office &middot; £/desk/mo</button>
-            <button data-product="coworking">Dedicated Desk &middot; £/month</button>
+            <button data-product="coworking">Coworking &middot; £/desk/mo</button>
           </div>
           <span class="badge-info" id="coworkingBadge">Market reference from public and operator listings — not a myHQ product. Ask us for real availability and pricing.</span>
         </div>
@@ -629,8 +626,18 @@
     </div>
 
     <div class="teambar">
-      <label for="teamSizeGlobal">Team size</label>
-      <input type="range" id="teamSizeGlobal" min="1" max="30" value="1" />
+      <label for="teamSizeInput">Team size</label>
+      <div class="stepper">
+        <button type="button" id="teamMinus" aria-label="Decrease team size">&minus;</button>
+        <input type="number" id="teamSizeInput" min="1" max="30" value="1" inputmode="numeric" aria-label="Team size" />
+        <button type="button" id="teamPlus" aria-label="Increase team size">+</button>
+      </div>
+      <div class="quick-sizes" role="group" aria-label="Quick team size">
+        <button type="button" class="quick-size-btn" data-size="1">1</button>
+        <button type="button" class="quick-size-btn" data-size="5">5</button>
+        <button type="button" class="quick-size-btn" data-size="10">10</button>
+        <button type="button" class="quick-size-btn" data-size="20">20</button>
+      </div>
       <span class="teambar-val" id="teamSizeGlobalVal">1 desk</span>
       <span class="teambar-hint" id="teambarHint">Prices below are per desk</span>
     </div>
@@ -686,9 +693,13 @@
 <div class="sec-personas">
   <div class="wrap">
     <section class="personas">
-      <h2>Which London area fits your team?</h2>
-      <p class="section-intro">Price is only half the decision — different areas attract different kinds of teams. These are the cheapest matches we track for each profile.</p>
+      <h2>Find the right London area for your team</h2>
+      <p class="section-intro">Compare lower-cost starting points with better-connected or more premium alternatives for different types of teams. Prices update with your workspace type and team size.</p>
       <div class="persona-grid" id="personaGrid"></div>
+      <div class="persona-cta">
+        <div class="persona-cta-copy"><strong>Not sure which area fits your team?</strong><span>Tell us your team size and budget and we’ll shortlist suitable London workspaces.</span></div>
+        <button type="button" class="btn btn-primary" id="personaCta">Get area recommendations</button>
+      </div>
     </section>
   </div>
 </div>
@@ -697,8 +708,8 @@
   <div class="wrap">
     <section class="compare-areas">
       <h2>How do London's office areas compare?</h2>
-      <p class="section-intro">Every dot below sits on the same citywide price scale, so distance apart means the same thing in every card — updated live from the map above.</p>
-      <div id="areaPairs" class="pair-grid"></div>
+      <p class="section-intro">Each table compares two areas directly. The lower-priced option is highlighted, and all prices update with your workspace type and team size above.</p>
+      <div id="areaPairs" class="mini-pair-grid"></div>
     </section>
   </div>
 </div>
@@ -709,19 +720,19 @@
       <h2>Common questions</h2>
       <details open>
         <summary>How much does office space cost vary by area in London?<span></span></summary>
-        <p>Across the 36 London localities we track (390 combined private-office and dedicated-desk listings), private-office prices per desk per month range from area averages of about £222 in outer boroughs to £982 in Mayfair — more than a 4x spread depending purely on postcode, with a citywide median area-average near £520/desk/month. Mayfair and Covent Garden sit at the top (roughly £860&ndash;£980/desk/month), while London Borough of Waltham Forest and Poplar sit closer to £220&ndash;£230/desk/month.</p>
+        <p>Across the 181 private-office listings behind this map, price per desk per month (normalised for office size) ranges from about £141 to £3,200 — a wide spread depending purely on postcode, with a citywide median near £550/desk/month. Mayfair and Covent Garden sit at the top (roughly £860&ndash;£980/desk/month), while Whitechapel and Hackney &amp; Bethnal Green sit closer to £200&ndash;£300/desk/month for comparable desk sizes.</p>
       </details>
       <details>
         <summary>What's the cheapest area for office space in London?</summary>
-        <p>Among areas with a reasonable sample (3 or more listings), London Borough of Waltham Forest (~£222/desk/month) and Poplar (~£227/desk/month) are the most affordable London localities we track. A few areas with only a single listing price lower still, but one listing isn't enough to call a trend.</p>
+        <p>Among areas with more than a handful of listings, Hackney &amp; Bethnal Green (~£302/desk/month) and Stratford &amp; Bow (~£388/desk/month) are the most affordable core-London submarkets we track. Outer submarkets can price lower still, but with far fewer comparable listings.</p>
       </details>
       <details>
         <summary>What's the best area for a small team's first London office?</summary>
-        <p>For a first office, most small teams prioritise low cost and good transport over a landmark postcode — which points to areas like London Borough of Waltham Forest, Poplar or Bermondsey, all under £350/desk/month with direct links into the centre. See "<a href="#personaGrid">Which London area fits your team?</a>" above for matches by industry.</p>
+        <p>For a first office, most small teams prioritise low cost and good transport over a landmark postcode — which points to Zone 2 areas like Hackney &amp; Bethnal Green, Stratford &amp; Bow or Whitechapel, all under £400/desk/month with direct links into the centre. See "<a href="#personaGrid">Which London area fits your team?</a>" above for matches by industry.</p>
       </details>
       <details>
-        <summary>Is a dedicated desk cheaper than a private office?</summary>
-        <p>Generally yes — a dedicated desk works out cheaper than a private office in the same area for a small team, since you're not paying for unused space. Across the areas we track, dedicated-desk prices average roughly £200&ndash;£530/desk/month against £220&ndash;£980/desk/month for a private office; the private office earns its premium once a team needs its own walls, lockable storage or room to grow into. Get a quote for your team size and we'll compare both product types side by side.</p>
+        <summary>Is coworking cheaper than a private office?</summary>
+        <p>Generally yes — coworking works out cheaper than a private office in the same area for a small team, since you're not paying for unused space. Across the areas we track, coworking prices average roughly £200&ndash;£750/desk/month against £200&ndash;£980/desk/month for a private office; the private office earns its premium once a team needs its own walls, lockable storage or room to grow into. Get a quote for your team size and we'll compare both product types side by side.</p>
       </details>
       <details>
         <summary>How current is this data?</summary>
@@ -735,8 +746,8 @@
   <div class="wrap">
     <div class="method">
       <h3>How prices are calculated</h3>
-      <p>Private-office prices are normalised to <b>£ per desk per month</b> by dividing each listing's advertised "from" price by the smallest office size it applies to — this avoids a 30-desk suite skewing an area's number just because it's a big space. Dedicated-desk/coworking figures are the advertised monthly rate for an ongoing desk, not a day pass, so both metrics are directly comparable across areas. Figures are aggregated from public marketplace and operator listings, not myHQ's own booking data, and reflect a single dated snapshot rather than live availability.</p>
-      <p>Broadly, price tracks Tube zone more than any other single factor: Zone 1 core areas (Mayfair, Soho, City of London) sit at £620&ndash;£980/desk/month, Zone 1 fringe (Shoreditch, Clerkenwell, South Bank, Holborn) at £525&ndash;£630, and outer areas (Hackney, Stratford, Canary Wharf, London Borough of Waltham Forest) drop to £220&ndash;£520 — often for a shorter commute than a "cheap" Zone 1 postcode once you account for space per person.</p>
+      <p>Private-office prices are normalised to <b>£ per desk per month</b> by dividing each listing's advertised "from" price by the smallest office size it applies to — this avoids a 30-desk suite skewing an area's number just because it's a big space. Coworking figures are the advertised monthly rate for an ongoing desk, not a day pass, so both metrics are directly comparable across areas. Figures are aggregated from public marketplace and operator listings, not myHQ's own booking data, and reflect a single dated snapshot rather than live availability.</p>
+      <p>Broadly, price tracks Tube zone more than any other single factor: Zone 1 core areas (Mayfair, Soho, the City) sit at £620&ndash;£980/desk/month, Zone 1 fringe (Shoreditch, Farringdon &amp; Clerkenwell, Borough &amp; London Bridge, Holborn) at £525&ndash;£640, and Zone 2&ndash;3 areas (Hackney, Stratford, Canary Wharf) drop to £300&ndash;£520 — often for a shorter commute than a "cheap" Zone 1 postcode once you account for space per person.</p>
       <p class="footnote">Areas with 2 or fewer listings are marked "small sample" in the ledger — treat those figures as directional, not definitive. "Best for," area descriptions and the operators listed in the compare view are representative characterisations for this prototype, not a verified or exhaustive directory.</p>
     </div>
   </div>
@@ -798,9 +809,9 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"How much does office space cost vary by area in London?","acceptedAnswer":{"@type":"Answer","text":"Private-office desks across the 36 London localities we track average about £222 to £982 per desk per month depending on postcode — over a 4x spread — with a citywide median area-average near £520/desk/month."}},
-    {"@type":"Question","name":"What's the cheapest area for office space in London?","acceptedAnswer":{"@type":"Answer","text":"London Borough of Waltham Forest and Poplar are among the most affordable London localities we track, with area averages around £222-£227 per desk per month."}},
-    {"@type":"Question","name":"What's the best area for a small team's first London office?","acceptedAnswer":{"@type":"Answer","text":"Areas with good transport and low cost per desk (under £350/month), such as London Borough of Waltham Forest, Poplar or Bermondsey, offer the lowest cost for a first office."}},
+    {"@type":"Question","name":"How much does office space cost vary by area in London?","acceptedAnswer":{"@type":"Answer","text":"Private office desks in the 20 London areas we track range from about £141 to £3,200 per desk per month depending on postcode, with a citywide median near £550/desk/month."}},
+    {"@type":"Question","name":"What's the cheapest area for office space in London?","acceptedAnswer":{"@type":"Answer","text":"Hackney & Bethnal Green and Stratford & Bow are among the most affordable core-London submarkets, with averages around £300-£390 per desk per month."}},
+    {"@type":"Question","name":"What's the best area for a small team's first London office?","acceptedAnswer":{"@type":"Answer","text":"Zone 2 areas with good transport links, such as Hackney & Bethnal Green, Stratford & Bow or Whitechapel, offer the lowest cost per desk (under £400/month) for a first office."}},
     {"@type":"Question","name":"Shoreditch vs City of London: which is cheaper for office space?","acceptedAnswer":{"@type":"Answer","text":"Shoreditch is the cheaper of the two, at roughly £582/desk/month versus £623/desk/month in the City — though both attract fast-growth tech and creative teams, so the choice often comes down to industry fit as much as price."}},
     {"@type":"Question","name":"Mayfair vs Soho: which is cheaper for office space?","acceptedAnswer":{"@type":"Answer","text":"Soho is cheaper, at roughly £760/desk/month versus Mayfair's £982/desk/month, though both are among London's most expensive submarkets and popular with creative and finance teams respectively."}},
     {"@type":"Question","name":"City of London vs Canary Wharf: which is cheaper for office space?","acceptedAnswer":{"@type":"Answer","text":"Canary Wharf is cheaper, at roughly £519/desk/month versus £623/desk/month in the City of London, despite both being major finance and corporate HQ hubs — though Canary Wharf's figure is based on a small sample of listings."}}
@@ -811,186 +822,106 @@
 <script>
 (function(){
   var DATA = [
-    {id:"city-of-london", name:"City of London", x:951, y:380,
-      private:{avg:623,median:623,min:299,max:1800,n:23}, coworking:{avg:346,min:189,max:700,n:17},
-      about:"London's historic financial core, the Square Mile, dense with banking, insurance and legal HQs.",
-      bestFor:["Finance & fintech","Professional & legal services"],
-      buildings:[]},
-    {id:"shoreditch", name:"Shoreditch", x:992, y:267,
+    {id:"shoreditch", name:"Shoreditch & Old Street", x:992, y:267,
       private:{avg:582,median:582,min:332,max:875,n:12}, coworking:{avg:332,min:120,max:500,n:15},
-      about:"London's tech and creative heartland, where warehouse conversions sit beside startups and nightlife.",
+      about:"Exposed brick and standing desks — London's original tech-and-creative postcode, still setting the tone for coworking culture.",
       bestFor:["Fast-growth tech & scaleups","Creative & media"],
-      buildings:[]},
-    {id:"holborn", name:"Holborn", x:796, y:342,
+      buildings:["Fora — Old Street","Huckletree — Shoreditch","x+why — Worship Street"]},
+    {id:"city", name:"City (Bank & Aldgate)", x:951, y:380,
+      private:{avg:623,median:623,min:299,max:1800,n:23}, coworking:{avg:346,min:189,max:700,n:17},
+      about:"Suits, trading floors and centuries of finance — the address that reassures clients before you've said a word.",
+      bestFor:["Finance & fintech","Professional & legal services"],
+      buildings:["beyond — Aldgate Tower","Fora — Bank","Clockwise — Liverpool Street"]},
+    {id:"holborn", name:"Holborn & Chancery Lane", x:796, y:342,
       private:{avg:627,median:627,min:273,max:1124,n:12}, coworking:{avg:337,min:148,max:450,n:11},
-      about:"The bridge between the West End and the City, long associated with the legal profession and the Inns of Court.",
+      about:"Barristers' chambers next door to boutique agencies — quietly prestigious, five minutes from everything.",
       bestFor:["Professional & legal services"],
-      buildings:[]},
-    {id:"marylebone", name:"Marylebone", x:513, y:294,
-      private:{avg:857,median:857,min:220,max:3200,n:14}, coworking:{avg:347,min:148,max:450,n:7},
-      about:"A refined central village of Georgian streets, medical practices and independent boutiques off Marylebone High Street.",
-      bestFor:["Healthcare & life sciences"],
-      buildings:[]},
-    {id:"mayfair", name:"Mayfair", x:595, y:421,
-      private:{avg:982,median:982,min:326,max:2642,n:17}, coworking:{avg:750,min:700,max:800,n:2},
-      about:"London's most prestigious address, home to hedge funds, private equity, art dealers and luxury retail.",
-      bestFor:["Finance & fintech"],
-      buildings:[]},
-    {id:"camden", name:"Camden", x:636, y:140,
-      private:{avg:520,median:520,min:152,max:980,n:14}, coworking:{avg:388,min:289,max:450,n:5},
-      about:"A famously alternative quarter around the markets and Regents Canal, strong in music, fashion and creative studios.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"islington", name:"Islington", x:857, y:158,
-      private:{avg:392,median:392,min:141,max:696,n:14}, coworking:{avg:398,min:295,max:500,n:3},
-      about:"A well-heeled north London district around Angel and Upper Street, popular with media and design firms.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"soho", name:"Soho", x:668, y:378,
-      private:{avg:760,median:760,min:412,max:1408,n:13}, coworking:{avg:400,min:289,max:450,n:5},
-      about:"Central London's entertainment and media village, dense with post-production, advertising and hospitality.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"hammersmith", name:"Hammersmith", x:160, y:573,
-      private:{avg:493,median:493,min:215,max:1280,n:8}, coworking:{avg:371,min:255,max:480,n:5},
-      about:"A major west London commercial hub by the river, well connected and home to large corporate campuses.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"south-bank", name:"South Bank", x:870, y:425,
-      private:{avg:601,median:601,min:279,max:1614,n:11}, coworking:{avg:396,min:289,max:450,n:3},
-      about:"A riverside cultural strip running from Waterloo to Blackfriars, mixing arts venues with modern office towers.",
-      bestFor:["Creative & media"],
-      buildings:[]},
+      buildings:["Fora — Chancery Lane","Landmark — High Holborn"]},
     {id:"fitzrovia", name:"Fitzrovia", x:620, y:329,
       private:{avg:728,median:728,min:319,max:1200,n:10}, coworking:{avg:363,min:189,max:450,n:3},
-      about:"A quietly central pocket north of Oxford Street, favoured by advertising, architecture and media businesses.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"ealing", name:"Ealing", x:5, y:590,
-      private:{avg:261,median:261,min:95,max:385,n:8}, coworking:{avg:350,min:350,max:350,n:1},
-      about:"A leafy west London town centre, historically the home of Ealing Studios and now a growing suburban office market.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"london-bridge", name:"London Bridge", x:960, y:455,
-      private:{avg:641,median:641,min:279,max:1085,n:8}, coworking:{avg:437,min:399,max:450,n:4},
-      about:"A riverside business district anchored by The Shard, strong in professional services and healthcare.",
-      bestFor:["Professional & legal services","Healthcare & life sciences"],
-      buildings:[]},
-    {id:"bloomsbury", name:"Bloomsbury", x:709, y:311,
-      private:{avg:520,median:520,min:300,max:810,n:7}, coworking:{avg:372,min:148,max:550,n:7},
-      about:"The academic quarter around the British Museum and UCL, dominated by universities, publishers and institutions.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"covent-garden", name:"Covent Garden", x:741, y:395,
-      private:{avg:863,median:863,min:509,max:2200,n:9}, coworking:{avg:353,min:189,max:450,n:3},
-      about:"A pedestrianised heart of the West End, blending theatre, retail and creative agency offices.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"kensington", name:"Kensington", x:302, y:514,
-      private:{avg:348,median:348,min:135,max:700,n:7}, coworking:{avg:490,min:379,max:600,n:2},
-      about:"An affluent west London district of museums, embassies and elegant garden squares.",
-      bestFor:[],
-      buildings:[]},
-    {id:"victoria", name:"Victoria", x:671, y:533,
-      private:{avg:728,median:728,min:525,max:965,n:5}, coworking:{avg:410,min:289,max:450,n:4},
-      about:"A major transport interchange and government-adjacent business district, extensively redeveloped in recent years.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"paddington", name:"Paddington", x:446, y:354,
-      private:{avg:649,median:649,min:319,max:1118,n:6}, coworking:{avg:530,min:289,max:700,n:3},
-      about:"A canalside commercial quarter around the station and Paddington Basin, with excellent Heathrow links.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"wandsworth", name:"Wandsworth", x:346, y:906,
-      private:{avg:402,median:402,min:241,max:595,n:4}, coworking:{avg:199,min:199,max:199,n:1},
-      about:"A residential south London borough with a growing local office market around the town centre and riverside.",
-      bestFor:[],
-      buildings:[]},
-    {id:"clerkenwell", name:"Clerkenwell", x:847, y:283,
+      about:"Ad agencies and architects in Georgian townhouses — polished without trying too hard.",
+      bestFor:["Creative & media","Fast-growth tech & scaleups"],
+      buildings:["Boutique Workplace — Fitzrovia","Spacemade — Great Titchfield St"]},
+    {id:"farringdon", name:"Farringdon & Clerkenwell", x:850, y:315,
       private:{avg:525,median:525,min:250,max:850,n:5}, coworking:{avg:285,min:120,max:450,n:2},
-      about:"The design and architecture district, known for its showrooms, converted workshops and the annual Clerkenwell Design Week.",
+      about:"Design studios, fintech and the Elizabeth line — London's best-connected creative cluster.",
+      bestFor:["Fast-growth tech & scaleups","Creative & media"],
+      buildings:["x+why — Clerkenwell","Huckletree — Farringdon"]},
+    {id:"covent", name:"Covent Garden", x:741, y:395,
+      private:{avg:863,median:863,min:509,max:2200,n:9}, coworking:{avg:353,min:189,max:450,n:3},
+      about:"Theatres, flagship stores and media brands — an address that does a lot of talking for you.",
+      bestFor:["Creative & media","Retail & consumer brands"],
+      buildings:["Fora — Covent Garden","Runway East — Long Acre"]},
+    {id:"borough", name:"Borough & London Bridge", x:959, y:463,
+      private:{avg:641,median:641,min:279,max:1085,n:8}, coworking:{avg:437,min:399,max:450,n:4},
+      about:"Scaleups and consultancies in the shadow of the Shard — City access without City prices.",
+      bestFor:["Fast-growth tech & scaleups","Professional & legal services"],
+      buildings:["WorkLife — Borough","Runway East — London Bridge"]},
+    {id:"camden", name:"Camden, King's Cross & Euston", x:636, y:140,
+      private:{avg:520,median:520,min:152,max:980,n:14}, coworking:{avg:388,min:289,max:450,n:5},
+      about:"Google's neighbourhood — a science-and-tech corridor built around three mainline stations.",
+      bestFor:["Fast-growth tech & scaleups","Creative & media"],
+      buildings:["Huckletree — King's Cross","Landmark — Euston"]},
+    {id:"soho", name:"Soho", x:668, y:378,
+      private:{avg:760,median:760,min:412,max:1408,n:13}, coworking:{avg:400,min:289,max:450,n:5},
+      about:"Media, music and marketing — small floors, big reputations, and rent to match.",
       bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"spitalfields", name:"Spitalfields", x:1035, y:300,
-      private:{avg:403,median:403,min:194,max:700,n:5}, coworking:{avg:387,min:148,max:500,n:4},
-      about:"A characterful City-fringe area around the old market, mixing Georgian streets with new office towers.",
-      bestFor:[],
-      buildings:[]},
-    {id:"st-jamess", name:"St. James's", x:615, y:460,
-      private:{avg:652,median:652,min:345,max:1017,n:5}, coworking:{avg:190,min:190,max:190,n:1},
-      about:"A discreet, historic enclave of gentlemen’s clubs, art galleries and boutique asset managers.",
-      bestFor:["Finance & fintech"],
-      buildings:[]},
-    {id:"london-borough-of-waltham-forest", name:"London Borough of Waltham Forest", x:1250, y:5,
-      private:{avg:222,median:222,min:218,max:232,n:5}, coworking:{avg:210,min:200,max:250,n:5},
-      about:"A north-east London borough with a growing creative and maker economy around Walthamstow.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"stratford", name:"Stratford", x:1376, y:187,
+      buildings:["Runway East — Wardour Street","Boutique Workplace — Soho"]},
+    {id:"hackney", name:"Hackney & Bethnal Green", x:1140, y:177,
+      private:{avg:302,median:302,min:248,max:328,n:3}, coworking:{avg:200,min:200,max:200,n:1},
+      about:"Founders and creatives who'd rather spend the budget on people than postcode.",
+      bestFor:["Fast-growth tech & scaleups","Non-profits & social enterprises"],
+      buildings:["x+why — Hackney","Spacemade — Bethnal Green"]},
+    {id:"hammersmith", name:"Hammersmith", x:160, y:573,
+      private:{avg:493,median:493,min:215,max:1280,n:8}, coworking:{avg:371,min:255,max:480,n:5},
+      about:"Broadcasters and corporate HQs along the river — west London's answer to Canary Wharf, without the commute.",
+      bestFor:["Enterprise & corporate HQs","Creative & media"],
+      buildings:["Clockwise — Hammersmith","Landmark — Hammersmith Broadway"]},
+    {id:"stratford", name:"Stratford & Bow", x:1376, y:187,
       private:{avg:388,median:388,min:280,max:565,n:3}, coworking:{avg:295,min:295,max:295,n:2},
-      about:"East London’s Olympic legacy district, anchored by Westfield and the growing East Bank cultural quarter.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"vauxhall", name:"Vauxhall", x:746, y:621,
-      private:{avg:283,median:283,min:43,max:600,n:5}, coworking:{avg:500,min:500,max:500,n:1},
-      about:"A regenerating riverside area around Nine Elms and the US Embassy, with new-build offices and residential towers.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"enfield", name:"Enfield", x:700, y:5,
-      private:{avg:753,median:753,min:243,max:1417,n:5}, coworking:{avg:200,min:200,max:200,n:1},
-      about:"A north London borough town centre with a predominantly local and light-industrial business base.",
-      bestFor:[],
-      buildings:[]},
-    {id:"canary-wharf", name:"Canary Wharf", x:1326, y:454,
-      private:{avg:519,median:519,min:439,max:669,n:3}, coworking:{avg:255,min:255,max:255,n:1},
-      about:"London's purpose-built second financial centre, dominated by banking, professional services and towers.",
+      about:"Warehouses turned offices near the Olympic Park — space-hungry teams get more desk for less.",
+      bestFor:["Logistics & e-commerce","Enterprise & corporate HQs"],
+      buildings:["WorkLife — Stratford","Spacemade — Bow"]},
+    {id:"brixton", name:"Brixton & Herne Hill", x:822, y:903,
+      private:{avg:352,median:325,min:240,max:492,n:3}, coworking:{avg:22.5,min:20,max:25,n:2},
+      about:"Independent, community-rooted and unmistakably creative — a locality with its own gravity. (Pricing here is an old placeholder, not yet verified against the latest sourced data.)",
+      bestFor:["Non-profits & social enterprises","Creative & media"],
+      buildings:["x+why — Brixton","Huckletree — Herne Hill"]},
+    {id:"victoria", name:"Victoria & Westminster", x:671, y:533,
+      private:{avg:650,median:650,min:245,max:965,n:7}, coworking:{avg:430,min:289,max:450,n:5},
+      about:"Government, charities and corporate HQs — formal, well-connected, built for meetings that matter.",
+      bestFor:["Government & public sector","Enterprise & corporate HQs"],
+      buildings:["Landmark — Victoria","Fora — Victoria Street"]},
+    {id:"islington", name:"Islington & Angel", x:857, y:158,
+      private:{avg:392,median:392,min:141,max:696,n:14}, coworking:{avg:398,min:295,max:500,n:3},
+      about:"Media and agency crowd who want Shoreditch energy with a bit more hush.",
+      bestFor:["Creative & media","Fast-growth tech & scaleups"],
+      buildings:["Clockwise — Angel","Huckletree — Islington"]},
+    {id:"elephant", name:"Elephant & Castle", x:880, y:558,
+      private:{avg:453,median:453,min:306,max:600,n:2}, coworking:{avg:23.3,min:10,max:50,n:3},
+      about:"A regeneration zone turning into a genuine startup postcode, fast. (Pricing here is an old placeholder, not yet verified against the latest sourced data.)",
+      bestFor:["Fast-growth tech & scaleups","Non-profits & social enterprises"],
+      buildings:["x+why — Elephant & Castle","Spacemade — Elephant Park"]},
+    {id:"mayfair", name:"Mayfair", x:595, y:421,
+      private:{avg:982,median:982,min:326,max:2642,n:17}, coworking:{avg:750,min:700,max:800,n:2},
+      about:"Private equity, family offices and the occasional royal warrant — the priciest square mile for a reason.",
       bestFor:["Finance & fintech","Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"bermondsey", name:"Bermondsey", x:1096, y:533,
-      private:{avg:308,median:308,min:122,max:660,n:4}, coworking:{avg:420,min:420,max:420,n:1},
-      about:"A converted-warehouse district south of the river, popular with design, food and creative businesses.",
-      bestFor:["Creative & media"],
-      buildings:[]},
+      buildings:["Fora — Mayfair","Landmark — Berkeley Square"]},
+    {id:"canarywharf", name:"Canary Wharf", x:1326, y:454,
+      private:{avg:519,median:519,min:439,max:669,n:3}, coworking:{avg:255,min:255,max:255,n:1},
+      about:"Banking towers and glass atriums — built for teams who need scale, security and a trading floor down the hall.",
+      bestFor:["Finance & fintech","Enterprise & corporate HQs"],
+      buildings:["Clockwise — Canary Wharf","WorkLife — Canary Wharf"]},
     {id:"whitechapel", name:"Whitechapel", x:1108, y:322,
       private:{avg:200,median:200,min:200,max:200,n:1}, coworking:{avg:262,min:148,max:350,n:4},
-      about:"A fast-changing East End district, boosted by the Elizabeth line and a growing life-sciences presence.",
-      bestFor:["Healthcare & life sciences"],
-      buildings:[]},
-    {id:"wimbledon", name:"Wimbledon", x:100, y:1040,
-      private:{avg:360,median:360,min:330,max:415,n:3}, coworking:{avg:379,min:379,max:379,n:1},
-      about:"A prosperous south-west London town centre, best known for tennis, with a steady suburban office market.",
-      bestFor:[],
-      buildings:[]},
-    {id:"battersea", name:"Battersea", x:463, y:778,
-      private:{avg:596,median:596,min:582,max:609,n:2}, coworking:{avg:350,min:350,max:350,n:2},
-      about:"A riverside regeneration story centred on the restored Power Station and the surrounding Nine Elms development.",
-      bestFor:["Enterprise & corporate HQs"],
-      buildings:[]},
-    {id:"poplar", name:"Poplar", x:1379, y:401,
-      private:{avg:227,median:227,min:177,max:253,n:3}, coworking:{avg:250,min:250,max:250,n:1},
-      about:"An east London area beside Canary Wharf, mixing docklands regeneration with maker and fashion workspace.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"merton-abbey", name:"Merton Abbey", x:350, y:1040,
-      private:{avg:232,median:232,min:232,max:232,n:1}, coworking:{avg:200,min:200,max:200,n:1},
-      about:"A south-west London industrial and heritage area along the River Wandle.",
-      bestFor:[],
-      buildings:[]},
-    {id:"westminster", name:"Westminster", x:650, y:505,
-      private:{avg:572,median:572,min:245,max:900,n:2}, coworking:{avg:450,min:450,max:450,n:1},
-      about:"The seat of government, with offices oriented toward policy, public affairs and associations.",
-      bestFor:["Professional & legal services"],
-      buildings:[]},
-    {id:"hackney-wick", name:"Hackney Wick", x:1374, y:91,
-      private:{avg:240,median:240,min:200,max:280,n:2}, coworking:{avg:225,min:200,max:250,n:2},
-      about:"A canalside cluster of artist studios and light industry, adjoining the Olympic Park.",
-      bestFor:["Creative & media"],
-      buildings:[]},
-    {id:"hackney", name:"Hackney", x:1140, y:177,
-      private:{avg:288,median:288,min:248,max:328,n:2}, coworking:{avg:200,min:200,max:200,n:1},
-      about:"A creative and independent east London borough, popular with studios, agencies and small enterprise.",
-      bestFor:["Creative & media","Fast-growth tech & scaleups"],
-      buildings:[]},
+      about:"Fintech and biotech spilling east from the City, at a fraction of the rent.",
+      bestFor:["Fast-growth tech & scaleups","Healthcare & life sciences"],
+      buildings:["x+why — Whitechapel","Spacemade — Whitechapel"]},
+    {id:"marylebone", name:"Marylebone", x:513, y:294,
+      private:{avg:857,median:857,min:220,max:3200,n:14}, coworking:{avg:347,min:148,max:450,n:7},
+      about:"Private healthcare, wealth managers and boutique firms — discreet, residential-feeling, very well-heeled.",
+      bestFor:["Healthcare & life sciences","Professional & legal services"],
+      buildings:["Fora — Marylebone","Landmark — New Cavendish Street"]}
   ];
 
   // Where this page hands traffic off to the actual listing pages. The 6
@@ -999,22 +930,26 @@
   // of trying to rank for "coworking space in X" themselves — this page's
   // job is comparison, not competing with our own listing pages.
   var AREA_LINKS = {
-    shoreditch:    "https://myhqspaces.com/gb/coworking/london/shoreditch",
-    "city-of-london": "https://myhqspaces.com/gb/coworking/london/city-of-london",
-    soho:          "https://myhqspaces.com/gb/coworking/london/soho",
-    victoria:      "https://myhqspaces.com/gb/coworking/london/victoria",
-    mayfair:       "https://myhqspaces.com/gb/coworking/london/mayfair",
-    "canary-wharf": "https://myhqspaces.com/gb/coworking/london/canary-wharf-estate",
-    holborn:       "https://myhqspaces.com/gb/coworking/london/central-london",
-    fitzrovia:     "https://myhqspaces.com/gb/coworking/london/central-london",
-    "covent-garden": "https://myhqspaces.com/gb/coworking/london/central-london",
-    camden:        "https://myhqspaces.com/gb/coworking/london/north-london",
-    hackney:       "https://myhqspaces.com/gb/coworking/london/east-london",
-    hammersmith:   "https://myhqspaces.com/gb/coworking/london/west-london",
-    stratford:     "https://myhqspaces.com/gb/coworking/london/east-london",
-    islington:     "https://myhqspaces.com/gb/coworking/london/north-london",
-    whitechapel:   "https://myhqspaces.com/gb/coworking/london/east-london",
-    marylebone:    "https://myhqspaces.com/gb/coworking/london/paddington"
+    shoreditch:  "https://myhqspaces.com/gb/coworking/london/shoreditch",
+    city:        "https://myhqspaces.com/gb/coworking/london/city-of-london",
+    soho:        "https://myhqspaces.com/gb/coworking/london/soho",
+    victoria:    "https://myhqspaces.com/gb/coworking/london/victoria",
+    mayfair:     "https://myhqspaces.com/gb/coworking/london/mayfair",
+    canarywharf: "https://myhqspaces.com/gb/coworking/london/canary-wharf-estate",
+    holborn:     "https://myhqspaces.com/gb/coworking/london/central-london",
+    fitzrovia:   "https://myhqspaces.com/gb/coworking/london/central-london",
+    farringdon:  "https://myhqspaces.com/gb/coworking/london/central-london",
+    covent:      "https://myhqspaces.com/gb/coworking/london/central-london",
+    borough:     "https://myhqspaces.com/gb/coworking/london/south-bank",
+    camden:      "https://myhqspaces.com/gb/coworking/london/north-london",
+    hackney:     "https://myhqspaces.com/gb/coworking/london/east-london",
+    hammersmith: "https://myhqspaces.com/gb/coworking/london/west-london",
+    stratford:   "https://myhqspaces.com/gb/coworking/london/east-london",
+    brixton:     "https://myhqspaces.com/gb/coworking/london/south-london",
+    islington:   "https://myhqspaces.com/gb/coworking/london/north-london",
+    elephant:    "https://myhqspaces.com/gb/coworking/london/south-london",
+    whitechapel: "https://myhqspaces.com/gb/coworking/london/east-london",
+    marylebone:  "https://myhqspaces.com/gb/coworking/london/paddington"
   };
   function byId(id){ for(var i=0;i<DATA.length;i++){ if(DATA[i].id===id) return DATA[i]; } return null; }
 
@@ -1159,8 +1094,8 @@
   // circles need — at the default full-extent view the price bubbles read
   // as small dots on a big map. Default view is now a closer-in window
   // centred on the dense core (Marylebone through Hackney, Camden through
-  // South Bank), with the outer areas (Hammersmith, Stratford,
-  // Canary Wharf, Wandsworth) still reachable by panning or zooming out —
+  // Elephant & Castle), with the outer areas (Hammersmith, Stratford,
+  // Canary Wharf, Brixton) still reachable by panning or zooming out —
   // nothing is cropped out of the data, just out of the default frame.
   var MIN_VIEW_W = 260, MAX_VIEW_W = BASEMAP_W;
   var DEFAULT_VIEW = { cx: 827, cy: 350, w: 820 };
@@ -1431,7 +1366,7 @@
         '<td><button class="pin-star '+(state.pinned.indexOf(d.id)>-1?"on":"")+'" aria-label="'+(state.pinned.indexOf(d.id)>-1?"Remove ":"Add ")+d.name+' to compare" title="'+(state.pinned.indexOf(d.id)>-1?"Remove from compare":"Add to compare")+'">'+(state.pinned.indexOf(d.id)>-1?"&#10003;":"&#43;")+'</button></td>'+
         '<td>'+
           '<div class="loc-name-row"><a class="loc-name" href="'+(AREA_LINKS[d.id]||"#")+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">'+d.name+'</a>'+(n<=2?'<span class="low-n">small sample</span>':'')+'</div>'+
-          '<div class="loc-top2">'+n+' flex space'+(n===1?"":"s")+(top2?' &middot; Popular: '+top2:'')+'</div>'+
+          '<div class="loc-top2">'+n+' flex space'+(n===1?"":"s")+' &middot; Popular: '+top2+'</div>'+
         '</td>'+
         '<td class="price-cell">'+fmt(teamPrice(v),product)+unitLabel(product)+'</td>';
       tr.addEventListener("click", function(){ togglePin(d.id); });
@@ -1476,17 +1411,22 @@
         .sort(function(a,b){ return priceOf(a,product) - priceOf(b,product); })
         .slice(0,3);
       if(!areas.length) return;
-      // Real rows (name left, price right, tabular) — not an inline
-      // sentence of comma-joined links, which buried the actual data
-      // (which areas, what price) inside prose that was hard to scan.
-      var rows = areas.map(function(d){
-        return "<div class='match-row'><a href='"+(AREA_LINKS[d.id]||"#")+"' target='_blank' rel='noopener'>"+d.name+"</a>"+
-          "<span class='match-price'>"+fmt(teamPrice(priceOf(d,product)),product)+"</span></div>";
+      // Present one clear recommendation first, then keep the other matches
+      // behind an accessible disclosure so the card is scannable at a glance.
+      var featured = areas[0];
+      var featuredMarkup = "<div class='featured-match'>"+
+        "<div class='match-copy'><span class='featured-label'>Best value starting point</span><a href='"+(AREA_LINKS[featured.id]||"#")+"' target='_blank' rel='noopener'>"+featured.name+"</a></div>"+
+        "<span class='featured-price'>"+fmt(teamPrice(priceOf(featured,product)),product)+unitLabel(product)+"</span></div>";
+      var alternatives = areas.slice(1).map(function(d){
+        return "<div class='match-row'>"+
+          "<div class='match-copy'><span class='match-role'>Alternative</span><a href='"+(AREA_LINKS[d.id]||"#")+"' target='_blank' rel='noopener'>"+d.name+"</a></div>"+
+          "<span class='match-price'>"+fmt(teamPrice(priceOf(d,product)),product)+unitLabel(product)+"</span></div>";
       }).join("");
+      var moreMarkup = alternatives ? "<details class='persona-more'><summary>See "+(areas.length - 1)+" other suitable areas</summary><div class='persona-matches'>"+alternatives+"</div></details>" : "";
       var card = document.createElement("div");
       card.className = "persona-card";
-      card.innerHTML = "<h3>"+tag+"</h3><p class='persona-blurb'>"+PERSONA_BLURB[tag]+"</p>"+
-        "<span class='matches-label'>Cheapest matches</span><div class='persona-matches'>"+rows+"</div>";
+      card.innerHTML = "<span class='persona-eyebrow'>Team profile</span><h3>"+tag+"</h3><p class='persona-blurb'>"+PERSONA_BLURB[tag]+"</p>"+
+        featuredMarkup + moreMarkup;
       grid.appendChild(card);
     });
   }
@@ -1494,89 +1434,52 @@
   // Seed set — the pattern scales to any pair in DATA, this is just the
   // first batch of comparisons worth surfacing as their own entries.
   var COMPARE_PAIRS = [
-    ["shoreditch","city-of-london"], ["city-of-london","canary-wharf"], ["mayfair","soho"],
+    ["shoreditch","city"], ["city","canarywharf"], ["mayfair","soho"],
     ["shoreditch","hackney"], ["victoria","mayfair"], ["islington","camden"],
-    ["clerkenwell","city-of-london"], ["canary-wharf","stratford"]
+    ["farringdon","city"], ["canarywharf","stratford"]
   ];
-  // A dumbbell plot, not an accordion: both prices placed on ONE shared
-  // scale (the full citywide min/max, same range the map legend uses) so
-  // a card's position on the page also shows where in London's overall
-  // price spectrum that pair sits — a cheap-vs-cheap pair reads visibly
-  // different from a premium-vs-premium one, which a Q&A row never could.
+  // Separate two-row tables make each price comparison self-contained.
+  // They preserve live product/team-size updates without asking users to
+  // decode dot positions on a shared scale.
   function renderComparePairs(){
     var wrap = document.getElementById("areaPairs");
     wrap.innerHTML = "";
     var product = state.product;
-    var allVals = DATA.map(function(d){ return priceOf(d, product); });
-    var gMin = Math.min.apply(null, allVals), gMax = Math.max.apply(null, allVals);
-    function trackPos(v){
-      var t = gMax === gMin ? 0.5 : (v - gMin) / (gMax - gMin);
-      return 10 + t * 80; // 10%-90% — tighter than before, real margin for edge labels
+    function fitLabel(d){
+      return d.bestFor.slice(0,2).join("; ");
     }
-    // Centred labels on a dot near either end of the track can overhang the
-    // card edge (worse the longer the area name) — anchor to the inside
-    // instead of the centre once a dot is close enough to an edge.
-    function labelAnchor(pos){ return pos < 22 ? "edge-left" : pos > 78 ? "edge-right" : ""; }
-    // Rotating, not repeated — four phrasings for the "both appeal to the
-    // same profile" case so eight cards don't read as one sentence copy-
-    // pasted with the nouns swapped (a real complaint from review).
-    // 8 variants for up to 8 cards — with only 4 last round, two cards were
-    // guaranteed to repeat near-verbatim (a real complaint). At 8 variants,
-    // this seed set never repeats; add more here before adding a 9th pair.
-    var SHARED_ANGLES = [
-      function(tag){ return "Both attract "+tag+" teams — price and postcode do the deciding here."; },
-      function(tag){ return "Same target profile ("+tag+"), so this one really is just about the number."; },
-      function(tag){ return "Neither wins on fit — both are "+tag+" strongholds, so it comes down to budget."; },
-      function(tag){ return "This is a straight price call: both are popular with "+tag+" teams."; },
-      function(tag){ return tag[0].toUpperCase()+tag.slice(1)+" teams shortlist both, so postcode and price break the tie."; },
-      function(tag){ return "No difference in fit here — pick on price, since both serve "+tag+" teams equally well."; },
-      function(tag){ return "Both show up on "+tag+" teams' shortlists, so the number below is the real deciding factor."; },
-      function(tag){ return "A fit-neutral comparison: both are common picks for "+tag+" teams."; }
-    ];
-    COMPARE_PAIRS.forEach(function(pair, i){
+    COMPARE_PAIRS.forEach(function(pair){
       var a = byId(pair[0]), b = byId(pair[1]);
       if(!a || !b) return;
       var va = priceOf(a,product), vb = priceOf(b,product);
       var aFirst = va <= vb;
       var left = aFirst ? {d:a, v:va} : {d:b, v:vb};
       var right = aFirst ? {d:b, v:vb} : {d:a, v:va};
-      var lp = trackPos(left.v), rp = trackPos(right.v);
       var diffPct = right.v > 0 ? Math.round(((right.v-left.v)/right.v)*100) : 0;
+      var saving = teamPrice(right.v-left.v);
       var shared = a.bestFor.filter(function(t){ return b.bestFor.indexOf(t) > -1; });
-      var angle = shared.length
-        ? SHARED_ANGLES[i % SHARED_ANGLES.length](shared[0].toLowerCase())
-        : (a.bestFor[0] && b.bestFor[0]
-          ? (a.bestFor[0]+" teams lean towards "+shortName(a.name)+"; "+shortName(b.name)+" is more "+b.bestFor[0].toLowerCase()+".")
-          : "Different profile, same shortlist — worth comparing on price and commute alone.");
-      var card = document.createElement("div");
-      card.className = "pair-card";
-      // Header names now follow the SAME left-to-right order as the track
-      // (cheaper first) — previously the header kept the pair's original
-      // array order while the track always put the cheaper dot on the
-      // left, so which name matched which side flipped card to card.
-      //
-      // The name no longer repeats a second time on the track — a small
-      // coloured mark next to each header name is the ONLY thing that ties
-      // it to its dot below, so the track only has to carry the one thing
-      // it doesn't say yet: the price. Real feedback was that the name
-      // printed twice within four lines was reading as one clashing block.
-      card.innerHTML =
-        "<div class='pair-names'>"+
-          "<a href='"+(AREA_LINKS[left.d.id]||'#')+"' target='_blank' rel='noopener'><span class='pair-mark cheap'></span>"+left.d.name+"</a>"+
-          "<span class='pair-vs'>vs</span>"+
-          "<a href='"+(AREA_LINKS[right.d.id]||'#')+"' target='_blank' rel='noopener'>"+right.d.name+"<span class='pair-mark'></span></a>"+
-        "</div>"+
-        "<div class='pair-track'>"+
-          "<span class='pair-scale-end left'>"+fmt(teamPrice(gMin),product)+"</span>"+
-          "<span class='pair-scale-end right'>"+fmt(teamPrice(gMax),product)+"</span>"+
-          "<div class='pair-fill' style='left:"+lp+"%; width:"+(rp-lp)+"%'></div>"+
-          "<div class='pair-price above "+labelAnchor(lp)+"' style='left:"+lp+"%'>"+fmt(teamPrice(left.v),product)+unitLabel(product)+"</div>"+
-          "<div class='pair-dot cheap' style='left:"+lp+"%'></div>"+
-          "<div class='pair-dot' style='left:"+rp+"%'></div>"+
-          "<div class='pair-price below "+labelAnchor(rp)+"' style='left:"+rp+"%'>"+fmt(teamPrice(right.v),product)+unitLabel(product)+"</div>"+
-        "</div>"+
-        "<p class='pair-angle'><b>"+shortName(left.d.name)+"</b> is "+diffPct+"% cheaper. "+angle+"</p>";
-      wrap.appendChild(card);
+      var verdict = shared.length
+        ? "Both suit "+shared[0].toLowerCase()+" teams; price and postcode are the main trade-off."
+        : shortName(left.d.name)+" leans towards "+left.d.bestFor[0].toLowerCase()+"; "+shortName(right.d.name)+" leans towards "+right.d.bestFor[0].toLowerCase()+".";
+      var block = document.createElement("section");
+      block.className = "mini-pair";
+      block.innerHTML =
+        "<div class='mini-pair-head'><h3>"+shortName(left.d.name)+" or "+shortName(right.d.name)+"?</h3>"+
+          "<span class='mini-saving'>Save "+fmt(saving,product)+" &middot; "+diffPct+"%</span></div>"+
+        "<table class='mini-table'><caption class='sr-only'>Price comparison between "+left.d.name+" and "+right.d.name+"</caption>"+
+          "<thead><tr><th>Area</th><th>"+(state.teamSize===1?"£/desk/month":"Team total/month")+"</th><th>Best suited to</th></tr></thead>"+
+          "<tbody>"+
+            "<tr class='is-cheaper'><td><a href='"+(AREA_LINKS[left.d.id]||'#')+"' target='_blank' rel='noopener'>"+left.d.name+"</a></td><td>"+fmt(teamPrice(left.v),product)+"</td><td>"+fitLabel(left.d)+"</td></tr>"+
+            "<tr><td><a href='"+(AREA_LINKS[right.d.id]||'#')+"' target='_blank' rel='noopener'>"+right.d.name+"</a></td><td>"+fmt(teamPrice(right.v),product)+"</td><td>"+fitLabel(right.d)+"</td></tr>"+
+          "</tbody></table>"+
+        "<p class='mini-verdict'><b>Lower-priced choice: "+shortName(left.d.name)+".</b> "+verdict+"</p>"+
+        "<button type='button' class='mini-pair-action'>Add both to comparison</button>";
+      block.querySelector(".mini-pair-action").addEventListener("click", function(){
+        state.pinned = [left.d.id, right.d.id];
+        render();
+        document.getElementById("compareBtn").focus();
+      });
+      wrap.appendChild(block);
     });
   }
 
@@ -1622,8 +1525,8 @@
     grid.innerHTML = "";
 
     // Shared axis across ALL localities so bar lengths are comparable card-to-card.
-    // The one Soho coworking outlier (£200/day, ~4x the next-highest) would otherwise
-    // squash every other bar to a sliver, so the axis caps at the 2nd-highest max and
+    // A single high-end outlier listing would otherwise squash every other bar to a
+    // sliver, so the axis caps at the 2nd-highest max and
     // any bar beyond that is visually clipped (the real number still shows in text).
     var allMax = DATA.map(function(x){ return rangeOf(x, product).max; }).sort(function(a,b){return a-b;});
     var axisMax = allMax[allMax.length - 2] || allMax[allMax.length - 1];
@@ -1644,19 +1547,18 @@
         "<div class='tag-row'>"+d.bestFor.map(function(t){ return "<span class='tag'>"+ICON_CHECK+t+"</span>"; }).join("")+"</div>"+
         "<div class='range-block'>"+
           "<div class='range-figures'><span>Low <b>"+fmt(teamPrice(r.min),product)+"</b></span><span>Typical <b>"+fmt(teamPrice(median),product)+"</b></span><span>High <b>"+fmt(teamPrice(r.max),product)+(clipped?"+":"")+"</b></span></div>"+
-          "<div class='range-track'><div class='range-fill' style='left:"+loPct+"%; width:"+Math.max(2,hiPct-loPct)+"%; background:"+tint+"'></div><div class='range-median' style='left:"+medPct+"%'></div></div>"+
           (clipped ? "<div class='range-caption'>One listing prices well above this area's typical range — shown in the figure, not the bar.</div>" : "")+
         "</div>"+
         "<hr class='card-divider'>"+
         "<p class='about-text'>"+d.about+"</p>"+
-        (d.buildings.length ? "<hr class='card-divider'>"+
-        "<div><p class='buildings-label'>Most popular here</p><ul class='buildings-list'>"+d.buildings.slice(0,2).map(function(b){ return "<li>"+ICON_BUILDING+b+"</li>"; }).join("")+"</ul></div>" : "");
+        "<hr class='card-divider'>"+
+        "<div><p class='buildings-label'>Most popular here</p><ul class='buildings-list'>"+d.buildings.slice(0,2).map(function(b){ return "<li>"+ICON_BUILDING+b+"</li>"; }).join("")+"</ul></div>";
       grid.appendChild(card);
     });
     picks.sort(function(a,b){ return priceOf(b,product) - priceOf(a,product); });
     var hi = picks[0], lo = picks[picks.length-1];
     var ratio = (priceOf(hi,product) / priceOf(lo,product));
-    var noun = product === "private" ? "private desk" : "dedicated desk";
+    var noun = product === "private" ? "private desk" : "coworking desk";
     var sentence = "A "+noun+" in "+hi.name+" costs "+ratio.toFixed(1)+"&times; more than in "+lo.name+" — about "+fmt(priceOf(hi,product)-priceOf(lo,product),product)+" more per desk, per month, before you factor in commute and clientele.";
     if(state.teamSize > 1){
       sentence += " For your team of "+state.teamSize+", that gap is roughly "+fmt(teamPrice(priceOf(hi,product)-priceOf(lo,product)),product)+"/mo.";
@@ -1690,14 +1592,25 @@
   document.getElementById("compareClose").addEventListener("click", function(){
     document.getElementById("comparePanel").classList.remove("open");
   });
-  document.getElementById("teamSizeGlobal").addEventListener("input", function(e){
-    state.teamSize = parseInt(e.target.value, 10);
-    var solo = state.teamSize === 1;
-    document.getElementById("teamSizeGlobalVal").textContent = state.teamSize + " desk" + (solo?"":"s");
+  function setTeamSize(n){
+    n = Math.max(1, Math.min(30, Math.round(n) || 1));
+    state.teamSize = n;
+    document.getElementById("teamSizeInput").value = n;
+    var solo = n === 1;
+    document.getElementById("teamSizeGlobalVal").textContent = n + " desk" + (solo?"":"s");
     document.getElementById("teambarHint").textContent = solo
       ? "Prices below are per desk"
-      : "Prices below show the total for " + state.teamSize + " desks";
+      : "Prices below show the total for " + n + " desks";
+    document.querySelectorAll(".quick-size-btn").forEach(function(b){
+      b.classList.toggle("active", parseInt(b.getAttribute("data-size"),10) === n);
+    });
     render();
+  }
+  document.getElementById("teamMinus").addEventListener("click", function(){ setTeamSize(state.teamSize - 1); });
+  document.getElementById("teamPlus").addEventListener("click", function(){ setTeamSize(state.teamSize + 1); });
+  document.getElementById("teamSizeInput").addEventListener("change", function(e){ setTeamSize(parseInt(e.target.value,10)); });
+  document.querySelectorAll(".quick-size-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){ setTeamSize(parseInt(btn.getAttribute("data-size"),10)); });
   });
 
   // modal
@@ -1708,6 +1621,7 @@
   }
   document.getElementById("heroCta").addEventListener("click", function(){ openModal("Tell us your team size and we'll match you to the right London areas."); });
   document.getElementById("footerCta").addEventListener("click", function(){ openModal(); });
+  document.getElementById("personaCta").addEventListener("click", function(){ openModal("Tell us your team size and budget and we'll shortlist suitable London workspaces."); });
   document.getElementById("compareCta").addEventListener("click", function(){
     var names = state.pinned.map(function(id){ return DATA.find(function(x){return x.id===id;}).name; }).join(" & ");
     openModal("We'll send real, bookable pricing for " + names + ".");
