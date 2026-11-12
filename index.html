@@ -177,6 +177,7 @@
     background: var(--accent); border-radius: 8px; transition: transform 250ms cubic-bezier(.4,0,.2,1), left 250ms cubic-bezier(.4,0,.2,1), width 250ms cubic-bezier(.4,0,.2,1), background 250ms ease-out;
   }
   .toggle button { white-space: nowrap; }
+  @media (max-width: 420px) { .toggle button { padding: 9px 10px; font-size: 0.78rem; } }
   .badge-info {
     font-size: 0.76rem; color: var(--attention); background: var(--attention-wash); border: 1px solid var(--attention-mid);
     padding: 5px 10px; border-radius: 999px; display: none;
@@ -213,7 +214,7 @@
      line was what pushed the last swatch straight off the edge of the
      panel. */
   .map-legend {
-    display: flex; flex-direction: column; gap: 6px;
+    display: flex; flex-wrap: wrap; align-items: center; column-gap: 32px; row-gap: 6px;
     padding: 10px 18px; border-bottom: 1px solid var(--line); background: var(--surface-2);
   }
   .legend-swatches { flex-wrap: wrap; row-gap: 4px; }
@@ -244,7 +245,7 @@
   .stepper button:active { background: var(--line-bold); }
   .stepper input[type=number] {
     width: 52px; height: 34px; border: none; border-left: 1px solid var(--line); border-right: 1px solid var(--line);
-    text-align: center; font: 600 0.95rem var(--font-family); color: var(--ink);
+    text-align: center; font: 600 0.95rem var(--font-family); color: var(--ink); background: var(--white);
     -moz-appearance: textfield;
   }
   .stepper input[type=number]::-webkit-outer-spin-button,
@@ -263,14 +264,25 @@
   .teambar-hint { font-size: 0.76rem; color: var(--ink-faint); }
 
   /* ---------- Console (map + ledger) ---------- */
-  .console { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; padding: 0 0 12px; align-items: stretch; }
-  @media (max-width: 900px) { .console { grid-template-columns: 1fr; } }
+  .console { padding: 0 0 12px; }
 
-  .panel { background: var(--white); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; height: 640px; }
+  .panel { background: var(--white); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; height: 680px; }
+  @media (max-width: 700px) { .panel { height: 580px; } }
   .panel-head {
-    display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
-    padding: 14px 18px; border-bottom: 1px solid var(--line); flex: none;
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    padding: 12px 18px; border-bottom: 1px solid var(--line); flex: none;
   }
+  .view-body { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .view-tabs { display: inline-flex; gap: 2px; padding: 3px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; }
+  .view-tabs button {
+    appearance: none; border: 0; background: transparent; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 7px;
+    font: 600 0.86rem var(--font-family); color: var(--ink-soft);
+    transition: background 120ms ease-out, color 120ms ease-out;
+  }
+  .view-tabs button:hover { color: var(--ink); }
+  .view-tabs button.active { background: var(--white); color: var(--ink); box-shadow: 0 0 0 1px var(--line), 0 1px 3px rgba(31,35,56,.08); }
+  .view-tabs button.active svg { color: var(--primary); }
   .panel-head h2 { display: flex; align-items: center; gap: 8px; font-family: var(--font-family); font-size: 1.02rem; margin: 0; font-weight: 600; }
   .panel-head h2 svg { flex: none; color: var(--ink-soft); }
   .panel-head span { font-size: 0.76rem; color: var(--ink-soft); }
@@ -382,6 +394,9 @@
      toggle, the CTA, a pinned row); the price is data, not a control, so it
      reads as plain confident type instead of one more purple element. */
   .price-cell { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; color: var(--ink); font-weight: 600; }
+  table.ledger td.col-range { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink-soft); }
+  table.ledger td.col-fit { color: var(--ink-soft); font-size: 0.8rem; }
+  @media (max-width: 760px) { table.ledger .col-range, table.ledger .col-fit { display: none; } }
   /* A +/check toggle, not a star — a star reads as "favourite" everywhere
      else on the web; this button means "add to compare," so it should look
      like a toggle, not a bookmark. */
@@ -532,35 +547,45 @@
   .persona-cta-copy span { display: block; margin-top: 3px; color: var(--ink-soft); font-size: 0.84rem; }
   .persona-cta button { flex: none; }
 
-  /* ---------- One unified area-comparison table ---------- */
-  .mini-pair-grid { margin-top: 24px; overflow-x: auto; }
-  .comparison-table { width: 100%; min-width: 860px; border-collapse: separate; border-spacing: 0; table-layout: fixed; font-size: 0.84rem; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-  .comparison-table caption { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-  .comparison-table thead th { padding: 13px 14px; color: var(--ink-faint); background: var(--surface-2); border-bottom: 1px solid var(--line); font-size: 0.65rem; font-weight: 650; text-align: left; text-transform: uppercase; letter-spacing: 0.05em; }
-  .comparison-table thead th + th { border-left: 1px solid #C7C9D1; }
-  .comparison-table thead th:nth-child(1) { width: 22%; }
-  .comparison-table thead th:nth-child(2) { width: 18%; }
-  .comparison-table thead th:nth-child(3) { width: 34%; }
-  .comparison-table thead th:nth-child(4) { width: 26%; }
-  .comparison-table tbody td { padding: 13px 14px; color: var(--ink-soft); vertical-align: middle; line-height: 1.45; }
-  .comparison-table tbody td + td { border-left: 1px solid #C7C9D1; }
-  .comparison-table .pair-bottom td, .comparison-table td.decision-cell { border-bottom: 1px solid var(--line); }
-  .comparison-table tbody:last-child .pair-bottom:last-child td { border-bottom: 0; }
-  .area-line { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-  .pair-area-name { min-width: 0; font-size: 0.88rem; line-height: 1.3; }
-  .pair-area-name a { color: var(--ink); font-weight: 650; text-decoration: none; }
-  .pair-area-name a:hover { color: var(--primary); text-decoration: underline; }
-  .table-price { color: var(--primary) !important; font-size: 1.08rem; font-weight: 750; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .context-copy { margin: 0; color: var(--ink-soft); font-size: 0.8rem; line-height: 1.5; }
-  .pair-add { flex: none; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 999px; background: var(--white); color: var(--primary); font: 600 0.65rem var(--font-family); cursor: pointer; }
-  .pair-add:hover, .pair-add.is-added { background: var(--primary); color: var(--on-dark); }
-  .pair-vs td { height: 24px; padding-top: 0; padding-bottom: 0; color: var(--ink-faint); }
-  .pair-vs td:first-child { text-align: center; }
-  .vs-label { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; height: 20px; padding: 0 5px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); color: var(--ink-faint); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.06em; }
-  .decision-cell { background: var(--surface-2); vertical-align: middle !important; }
-  .decision-copy { margin: 0; color: var(--ink); font-size: 0.82rem; line-height: 1.55; }
-  .decision-copy strong { color: var(--primary); font-weight: 700; }
-  @media (max-width: 650px) { .comparison-table { min-width: 800px; font-size: 0.78rem; } .comparison-table thead th, .comparison-table tbody td { padding-left: 10px; padding-right: 10px; } }
+  /* ---------- London office areas compared (one row per area) ---------- */
+  .area-table-wrap { margin-top: 24px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--white); }
+  table.area-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  .area-table caption { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+  .area-table thead th { text-align: left; padding: 12px 16px; background: var(--surface-2); border-bottom: 1px solid var(--line); font: 650 0.66rem var(--font-family); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); }
+  .area-table thead th:nth-child(1) { width: 21%; }
+  .area-table thead th:nth-child(2) { width: 16%; }
+  .area-table thead th:nth-child(4) { width: 27%; }
+  .area-table td { padding: 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .area-table tbody tr:last-child td { border-bottom: 0; }
+  .area-table tbody tr { transition: background 120ms ease-out; }
+  .area-table tbody tr:hover { background: var(--primary-subtlest); }
+  .cmp-area { color: var(--ink); font-weight: 650; font-size: 0.92rem; text-decoration: none; line-height: 1.3; }
+  .cmp-area:hover { color: var(--primary); text-decoration: underline; }
+  .cmp-area-cell .low-n { display: inline-block; margin: 6px 0 0; }
+  .cmp-price { display: block; color: var(--ink); font-weight: 700; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .cmp-price small { font-size: 0.72rem; font-weight: 500; color: var(--ink-faint); }
+  .cmp-vs-median { display: block; margin-top: 3px; font-size: 0.74rem; color: var(--ink-soft); }
+  .cmp-profile { margin: 0; color: var(--ink-soft); line-height: 1.55; }
+  .vs-list { display: flex; flex-direction: column; gap: 6px; }
+  .vs-chip {
+    appearance: none; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; width: 100%;
+    padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); cursor: pointer;
+    font: 600 0.8rem var(--font-family); color: var(--ink); text-align: left;
+    transition: border-color 120ms ease-out, background 120ms ease-out, color 120ms ease-out;
+  }
+  .vs-chip:hover { border-color: var(--primary); color: var(--primary); }
+  .vs-delta { flex: none; font-weight: 500; font-size: 0.74rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .vs-delta.is-less { color: #0f766e; }
+  @media (max-width: 720px) {
+    .area-table thead { display: none; }
+    .area-table, .area-table tbody { display: block; }
+    .area-table tbody tr { display: grid; grid-template-columns: 1fr auto; column-gap: 12px; padding: 16px; border-bottom: 1px solid var(--line); }
+    .area-table tbody tr:last-child { border-bottom: 0; }
+    .area-table td { display: block; padding: 0; border: 0; }
+    .area-table td.cmp-price-cell { text-align: right; }
+    .area-table td.cmp-profile-cell, .area-table td.cmp-vs-cell { grid-column: 1 / -1; margin-top: 10px; }
+    .area-table td.cmp-vs-cell::before { content: "Most compared with"; display: block; margin-bottom: 6px; font: 650 0.64rem var(--font-family); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); }
+  }
 
   /* ---------- How do areas compare? (reuses the FAQ's details/summary look) ---------- */
   .compare-areas details p a, .faq details p a { color: var(--primary); font-weight: 600; text-decoration: none; }
@@ -646,9 +671,13 @@
     <section class="console">
       <div class="panel">
         <div class="panel-head">
-          <h2><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Price map</h2>
-          <span>Hover an area for details &middot; click to compare</span>
+          <div class="view-tabs" role="tablist" aria-label="Choose how to view prices">
+            <button type="button" role="tab" id="tabMap" class="active" aria-selected="true" aria-controls="viewMap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Price map</button>
+            <button type="button" role="tab" id="tabList" aria-selected="false" aria-controls="viewList" tabindex="-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="19" x2="4" y2="11"/><line x1="12" y1="19" x2="12" y2="5"/><line x1="20" y1="19" x2="20" y2="14"/></svg>Ranked list</button>
+          </div>
+          <span id="viewHint">Hover an area for details &middot; click to compare</span>
         </div>
+        <div class="view-body" id="viewMap" role="tabpanel" aria-labelledby="tabMap">
         <div class="map-legend">
           <div class="legend">
             <span class="legend-label">Colour = price</span>
@@ -671,20 +700,16 @@
             <button type="button" id="zoomReset" class="map-reset" aria-label="Reset view">&#8634;</button>
           </div>
         </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-head">
-          <h2><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="19" x2="4" y2="11"/><line x1="12" y1="19" x2="12" y2="5"/><line x1="20" y1="19" x2="20" y2="14"/></svg>Ranked by price</h2>
-          <span id="ledgerUnit">cheapest first</span>
         </div>
-        <div class="ledger-scroll">
-          <table class="ledger">
-            <thead>
-              <tr><th></th><th>Area</th><th style="text-align:right">Price</th></tr>
-            </thead>
-            <tbody id="ledgerBody"></tbody>
-          </table>
+        <div class="view-body" id="viewList" role="tabpanel" aria-labelledby="tabList" hidden>
+          <div class="ledger-scroll">
+            <table class="ledger">
+              <thead>
+                <tr><th></th><th>Area</th><th class="col-range">Price range</th><th class="col-fit">Best suited to</th><th style="text-align:right">Typical price</th></tr>
+              </thead>
+              <tbody id="ledgerBody"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -708,9 +733,9 @@
 <div class="sec-compare-areas">
   <div class="wrap">
     <section class="compare-areas">
-      <h2>How do London's office areas compare?</h2>
-      <p class="section-intro">Each comparison brings two London areas together across price, market fit and the practical trade-off between them. Prices update with your workspace type and team size above.</p>
-      <div id="areaPairs" class="mini-pair-grid"></div>
+      <h2>London office areas compared</h2>
+      <p class="section-intro">Every area we track, side by side: what a desk costs, what the area is known for, and the areas teams most often weigh it against. Pick any comparison to open both areas in the comparison drawer. Prices follow your workspace type and team size above.</p>
+      <div id="areaPairs" class="area-table-wrap"></div>
     </section>
   </div>
 </div>
@@ -1099,7 +1124,9 @@
   // Canary Wharf, Brixton) still reachable by panning or zooming out —
   // nothing is cropped out of the data, just out of the default frame.
   var MIN_VIEW_W = 260, MAX_VIEW_W = BASEMAP_W;
-  var DEFAULT_VIEW = { cx: 827, cy: 350, w: 820 };
+  // h is the height the default view always shows; on a wide panel the width
+  // grows to match instead of cropping the top and bottom of the map.
+  var DEFAULT_VIEW = { cx: 778, cy: 382, w: 820, h: 640 };
   var view = { cx: DEFAULT_VIEW.cx, cy: DEFAULT_VIEW.cy, w: DEFAULT_VIEW.w };
   var lastViewBox = {minX:0, minY:0, w:BASEMAP_W, h:BASEMAP_H};
 
@@ -1122,7 +1149,6 @@
     document.getElementById("mapSvg").setAttribute("viewBox",
       minX.toFixed(1)+" "+minY.toFixed(1)+" "+view.w.toFixed(1)+" "+h.toFixed(1));
   }
-  function applyViewBox(){ updateViewBox(); }
 
   function zoomBy(factor, cx, cy){
     var newW = view.w / factor;
@@ -1138,7 +1164,10 @@
     updateViewBox();
   }
   function resetView(){
-    view.cx = DEFAULT_VIEW.cx; view.cy = DEFAULT_VIEW.cy; view.w = DEFAULT_VIEW.w;
+    var r = mapwrap.getBoundingClientRect();
+    var fitW = (r.width && r.height) ? DEFAULT_VIEW.h * r.width / r.height : DEFAULT_VIEW.w;
+    view.cx = DEFAULT_VIEW.cx; view.cy = DEFAULT_VIEW.cy;
+    view.w = Math.min(MAX_VIEW_W, Math.max(DEFAULT_VIEW.w, fitW));
     updateViewBox();
   }
 
@@ -1258,7 +1287,6 @@
       });
       nodesLayer.appendChild(g);
     });
-    applyViewBox();
   }
 
   function showTip(e, d){
@@ -1276,7 +1304,6 @@
   function render(){
     var product = state.product;
     applyAccent(product);
-    document.getElementById("ledgerUnit").textContent = "cheapest £/desk/month first";
     document.getElementById("coworkingBadge").classList.toggle("show", product === "coworking");
 
     // Pass 1: figure out every circle's radius/value/price text first —
@@ -1358,7 +1385,7 @@
     var body = document.getElementById("ledgerBody");
     body.innerHTML = "";
     sorted.forEach(function(d){
-      var v = priceOf(d, product), n = nOf(d, product);
+      var v = priceOf(d, product), n = nOf(d, product), r = rangeOf(d, product);
       var tr = document.createElement("tr");
       tr.className = state.pinned.indexOf(d.id) > -1 ? "pinned" : "";
       tr.setAttribute("data-id", d.id);
@@ -1369,6 +1396,8 @@
           '<div class="loc-name-row"><a class="loc-name" href="'+(AREA_LINKS[d.id]||"#")+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">'+d.name+'</a>'+(n<=2?'<span class="low-n">small sample</span>':'')+'</div>'+
           '<div class="loc-top2">'+n+' flex space'+(n===1?"":"s")+' &middot; Popular: '+top2+'</div>'+
         '</td>'+
+        '<td class="col-range">'+(r.min===r.max ? fmt(teamPrice(r.min),product) : fmt(teamPrice(r.min),product)+'&ndash;'+fmt(teamPrice(r.max),product))+'</td>'+
+        '<td class="col-fit">'+d.bestFor.join(", ")+'</td>'+
         '<td class="price-cell">'+fmt(teamPrice(v),product)+unitLabel(product)+'</td>';
       tr.addEventListener("click", function(){ togglePin(d.id); });
       // The map and the ranked list are one instrument, not two restatements
@@ -1432,81 +1461,104 @@
     });
   }
 
-  // Seed set — the pattern scales to any pair in DATA, this is just the
-  // first batch of comparisons worth surfacing as their own entries.
-  var COMPARE_PAIRS = [
-    ["shoreditch","city"], ["city","canarywharf"], ["mayfair","soho"],
-    ["shoreditch","hackney"], ["victoria","mayfair"], ["islington","camden"],
-    ["farringdon","city"], ["canarywharf","stratford"]
-  ];
   var AREA_RELEVANCE = {
     shoreditch:"Established technology and creative cluster with strong startup demand and a broad flexible-office market.",
     city:"Prime finance and professional-services district suited to formal, client-facing firms and established corporate teams.",
-    canarywharf:"Modern corporate hub with larger floorplates, high-spec buildings and strong appeal for finance and enterprise teams.",
-    mayfair:"Prestige-led West End market with limited supply and sustained demand from finance, luxury and private-client businesses.",
+    holborn:"Legal and professional-services core around the Inns of Court, with steady demand from chambers, advisers and client-facing firms.",
+    fitzrovia:"Creative, media and tech market in Georgian streets just north of Oxford Street, with polished small-to-mid-size spaces.",
+    farringdon:"Mixed technology, design and professional-services market positioned between the City and London's creative districts.",
+    covent:"Prime West End address for media, retail and consumer brands, where flexible space trades on location and footfall.",
+    borough:"City-fringe market south of the river around London Bridge, popular with scaleups and consultancies wanting City access for less.",
+    camden:"Growing technology, research and life-sciences corridor with strong demand from scaling and innovation-led organisations.",
     soho:"Creative and media-led West End district known for smaller floors, strong brand value and a lively commercial environment.",
     hackney:"Founder-friendly East London market with a more informal business profile and comparatively budget-conscious workspace demand.",
+    hammersmith:"West London's main office hub, home to broadcasters and corporate HQs, with good road links and easy Heathrow access.",
+    stratford:"Large eastern business district with newer stock, larger spaces and value-led appeal for enterprise and operational teams.",
+    brixton:"Community-led South London market with a strong creative and social-enterprise base and smaller, independent workspaces.",
     victoria:"Established government and corporate district suited to formal headquarters, public-sector teams and client-facing businesses.",
     islington:"Quieter city-fringe market popular with creative, media and growing technology teams seeking a less corporate setting.",
-    camden:"Growing technology, research and life-sciences corridor with strong demand from scaling and innovation-led organisations.",
-    farringdon:"Mixed technology, design and professional-services market positioned between the City and London's creative districts.",
-    stratford:"Large eastern business district with newer stock, larger spaces and value-led appeal for enterprise and operational teams."
+    elephant:"Fast-regenerating South London district with new mixed-use schemes, attracting startups and social enterprises on tighter budgets.",
+    mayfair:"Prestige-led West End market with limited supply and sustained demand from finance, luxury and private-client businesses.",
+    canarywharf:"Modern corporate hub with larger floorplates, high-spec buildings and strong appeal for finance and enterprise teams.",
+    whitechapel:"East-of-City market with growing fintech and life-sciences activity, offering City proximity at noticeably lower rents.",
+    marylebone:"Discreet, well-heeled West End village favoured by private healthcare, wealth managers and boutique professional firms."
   };
-  var PAIR_DECISIONS = {
-    "shoreditch|city":"Choose Shoreditch for a technology or creative environment; choose the City when a formal finance-led address and client-facing profile matter more.",
-    "city|canarywharf":"Choose the City for traditional financial-district prestige; choose Canary Wharf for modern corporate buildings, larger floorplates and a stronger enterprise-HQ feel.",
-    "mayfair|soho":"Choose Mayfair for prestige and private-client positioning; choose Soho for a more creative brand environment and generally less exclusive market profile.",
-    "shoreditch|hackney":"Choose Shoreditch for an established technology cluster; choose Hackney for a more informal East London setting with stronger budget appeal.",
-    "victoria|mayfair":"Choose Victoria for government and corporate practicality; choose Mayfair when prestige, private-client perception and a premium West End address lead the decision.",
-    "islington|camden":"Choose Islington for a quieter creative city-fringe base; choose Camden and King's Cross for a stronger technology, research and scale-up ecosystem.",
-    "farringdon|city":"Choose Farringdon for a mixed technology and design environment; choose the City for finance, legal services and a more traditional corporate address.",
-    "canarywharf|stratford":"Choose Canary Wharf for a polished corporate-HQ environment; choose Stratford for larger, newer and more value-oriented workspace options."
+  // The areas teams most often weigh each one against — neighbours or
+  // same-profile alternatives, i.e. the real "X vs Y" searches.
+  var COMPARED_WITH = {
+    shoreditch:["city","farringdon","hackney"],
+    city:["canarywharf","shoreditch","farringdon"],
+    holborn:["farringdon","covent","city"],
+    fitzrovia:["marylebone","soho","camden"],
+    farringdon:["shoreditch","city","holborn"],
+    covent:["soho","holborn","mayfair"],
+    borough:["city","elephant","shoreditch"],
+    camden:["islington","fitzrovia","shoreditch"],
+    soho:["covent","mayfair","fitzrovia"],
+    hackney:["shoreditch","stratford","islington"],
+    hammersmith:["victoria","marylebone"],
+    stratford:["canarywharf","hackney","whitechapel"],
+    brixton:["elephant","borough"],
+    victoria:["mayfair","city","hammersmith"],
+    islington:["camden","shoreditch","farringdon"],
+    elephant:["borough","brixton"],
+    mayfair:["soho","marylebone","victoria"],
+    canarywharf:["city","stratford","whitechapel"],
+    whitechapel:["city","shoreditch","canarywharf"],
+    marylebone:["mayfair","fitzrovia"]
   };
-  // Each visible comparison is rendered as three internal lines — area one,
-  // VS, then area two — while the decision cell spans the complete group.
+  var UNVERIFIED_COWORKING = { brixton:true, elephant:true };
+  var VS_LABEL = { elephant:"Elephant & Castle" };
+
   function renderComparePairs(){
     var wrap = document.getElementById("areaPairs");
-    wrap.innerHTML = "";
     var product = state.product;
+    var prices = DATA.map(function(d){ return priceOf(d, product); }).sort(function(a,b){ return a-b; });
+    var mid = Math.floor(prices.length/2);
+    var londonMedian = prices.length % 2 ? prices[mid] : (prices[mid-1] + prices[mid]) / 2;
+    var priceHead = state.teamSize === 1 ? "Typical price" : "Team of "+state.teamSize+" / month";
+
     var table = document.createElement("table");
-    table.className = "comparison-table";
-    table.innerHTML = "<caption>London office-area comparisons with live pricing and decision guidance</caption>"+
-      "<thead><tr><th scope='col'>Area comparison</th><th scope='col'>Price</th><th scope='col'>Relevant area context</th><th scope='col'>Decision</th></tr></thead><tbody></tbody>";
+    table.className = "area-table";
+    table.innerHTML = "<caption>London office areas compared by price, area profile and most-compared alternatives</caption>"+
+      "<thead><tr><th scope='col'>Area</th><th scope='col'>"+priceHead+"</th><th scope='col'>Area profile</th><th scope='col'>Most compared with</th></tr></thead><tbody></tbody>";
     var body = table.querySelector("tbody");
-    COMPARE_PAIRS.forEach(function(pair){
-      var a = byId(pair[0]), b = byId(pair[1]);
-      if(!a || !b) return;
-      var va = priceOf(a,product), vb = priceOf(b,product);
-      var aContext = AREA_RELEVANCE[a.id] || "Established London office market serving a broad range of flexible-workspace occupiers.";
-      var bContext = AREA_RELEVANCE[b.id] || "Established London office market serving a broad range of flexible-workspace occupiers.";
-      var decision = PAIR_DECISIONS[a.id+"|"+b.id] || ("Choose "+shortName(a.name)+" for "+a.bestFor[0].toLowerCase()+"; choose "+shortName(b.name)+" for "+b.bestFor[0].toLowerCase()+".");
-      var top = document.createElement("tr");
-      top.className = "pair-top";
-      top.innerHTML =
-        "<td><div class='area-line'><span class='pair-area-name'><a href='"+(AREA_LINKS[a.id]||'#')+"' target='_blank' rel='noopener'>"+a.name+"</a></span><button type='button' class='pair-add' data-area-id='"+a.id+"' aria-label='Add "+a.name+" to comparison'>+ Add</button></div></td>"+
-        "<td class='table-price'>"+fmt(teamPrice(va),product)+unitLabel(product)+"</td>"+
-        "<td><p class='context-copy'>"+aContext+"</p></td>"+
-        "<td class='decision-cell' rowspan='3'><p class='decision-copy'><strong>Decision:</strong> "+decision+"</p></td>";
-      var versus = document.createElement("tr");
-      versus.className = "pair-vs";
-      versus.innerHTML = "<td><span class='vs-label'>VS</span></td><td aria-hidden='true'></td><td aria-hidden='true'></td>";
-      var bottom = document.createElement("tr");
-      bottom.className = "pair-bottom";
-      bottom.innerHTML =
-        "<td><div class='area-line'><span class='pair-area-name'><a href='"+(AREA_LINKS[b.id]||'#')+"' target='_blank' rel='noopener'>"+b.name+"</a></span><button type='button' class='pair-add' data-area-id='"+b.id+"' aria-label='Add "+b.name+" to comparison'>+ Add</button></div></td>"+
-        "<td class='table-price'>"+fmt(teamPrice(vb),product)+unitLabel(product)+"</td>"+
-        "<td><p class='context-copy'>"+bContext+"</p></td>";
-      [top,bottom].forEach(function(row){ row.querySelectorAll(".pair-add").forEach(function(btn){
+
+    DATA.slice().sort(function(a,b){ return a.name.localeCompare(b.name); }).forEach(function(d){
+      var v = priceOf(d, product), n = nOf(d, product);
+      var pct = Math.round(((v - londonMedian) / londonMedian) * 100);
+      var vsMedian = Math.abs(pct) < 3 ? "In line with London median"
+        : Math.abs(pct)+"% "+(pct > 0 ? "above" : "below")+" London median";
+      var flag = (product === "coworking" && UNVERIFIED_COWORKING[d.id]) ? "price unverified"
+        : (n <= 2 ? "small sample" : "");
+
+      var chips = (COMPARED_WITH[d.id] || []).map(byId).filter(Boolean).map(function(alt){
+        var diff = teamPrice(priceOf(alt, product) - v);
+        var delta = Math.round(diff) === 0 ? "same price"
+          : fmt(Math.abs(diff), product)+(diff > 0 ? " more" : " less");
+        return "<button type='button' class='vs-chip' data-alt='"+alt.id+"' aria-label='Compare "+d.name+" vs "+alt.name+" office prices'>"+
+          "<span>vs "+(VS_LABEL[alt.id] || shortName(alt.name))+"</span><span class='vs-delta"+(diff < 0 ? " is-less" : "")+"'>"+delta+"</span></button>";
+      }).join("");
+
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        "<td class='cmp-area-cell'><a class='cmp-area' href='"+(AREA_LINKS[d.id]||"#")+"' target='_blank' rel='noopener'>"+d.name+"</a>"+
+          (flag ? "<br><span class='low-n'>"+flag+"</span>" : "")+"</td>"+
+        "<td class='cmp-price-cell'><span class='cmp-price'>"+fmt(teamPrice(v), product)+"<small>"+unitLabel(product)+"</small></span>"+
+          "<span class='cmp-vs-median'>"+vsMedian+"</span></td>"+
+        "<td class='cmp-profile-cell'><p class='cmp-profile'>"+(AREA_RELEVANCE[d.id] || d.about)+"</p></td>"+
+        "<td class='cmp-vs-cell'><div class='vs-list'>"+chips+"</div></td>";
+      tr.querySelectorAll(".vs-chip").forEach(function(btn){
         btn.addEventListener("click", function(){
-          var id = btn.getAttribute("data-area-id");
-          togglePin(id);
+          state.pinned = [d.id, btn.getAttribute("data-alt")];
+          render();
+          document.getElementById("comparePanel").classList.add("open");
           document.getElementById("compareBtn").focus();
         });
-      }); });
-      body.appendChild(top);
-      body.appendChild(versus);
-      body.appendChild(bottom);
+      });
+      body.appendChild(tr);
     });
+    wrap.innerHTML = "";
     wrap.appendChild(table);
   }
 
@@ -1612,6 +1664,30 @@
   moveIndicatorTo(document.querySelector("#productToggle button.active"));
   window.addEventListener("resize", function(){ moveIndicatorTo(document.querySelector("#productToggle button.active")); });
 
+  // map / ranked-list view switch
+  var viewTabs = [document.getElementById("tabMap"), document.getElementById("tabList")];
+  var VIEW_HINTS = { tabMap: "Hover an area for details \u00b7 click to compare", tabList: "Cheapest first \u00b7 click a row to compare" };
+  function showView(tab){
+    viewTabs.forEach(function(t){
+      var on = t === tab;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+    });
+    document.getElementById("viewHint").textContent = VIEW_HINTS[tab.id];
+    // The map measures its container to size the viewBox; it was 0x0 while hidden.
+    if(tab.id === "tabMap") window.dispatchEvent(new Event("resize"));
+  }
+  viewTabs.forEach(function(t, i){
+    t.addEventListener("click", function(){ showView(t); });
+    t.addEventListener("keydown", function(e){
+      if(e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      var next = viewTabs[(i + 1) % viewTabs.length];
+      showView(next); next.focus();
+    });
+  });
+
   // compare open/close
   document.getElementById("compareBtn").addEventListener("click", function(){
     document.getElementById("comparePanel").classList.toggle("open");
@@ -1668,6 +1744,8 @@
 
   buildScene();
   render();
+  // Frame the map only once the legend is filled in and the map has its final height.
+  resetView();
 })();
 </script>
 
